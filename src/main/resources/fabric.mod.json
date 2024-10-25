@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "jamandjelly",
+	"version": "${version}",
+	"name": "Jam & Jelly",
+	"description": "Hi, I am Almiris and this is my second project called Jam & Jelly. This is all about making of jams, jellies and similar stuff from fruits and berries. It has the integration with another my mod Arboreal Nature",
+	"authors": [
+		"Almiris (Alminoris)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/jamandjelly/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.alminoris.jamandjelly.JamJelly"
+		],
+		"fabric-datagen": [
+			"net.alminoris.jamandjelly.JamJellyDataGenerator"
+		],
+		"client":
+		[
+			"net.alminoris.jamandjelly.JamJellyClient"
+		]
+	},
+	"mixins": [
+		"jamandjelly.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
