@@ -1,0 +1,112 @@
+{
+  "variants": {
+    "variant=closed,inside=apple,support=true": {
+      "model": "jamandjelly:block/apple/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=apple,support=true": {
+      "model": "jamandjelly:block/apple/jamming_pot_support"
+    },
+    "variant=insided,inside=apple,support=true": {
+      "model": "jamandjelly:block/apple/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=apple,support=false": {
+      "model": "jamandjelly:block/apple/jamming_pot_closed"
+    },
+    "variant=normal,inside=apple,support=false": {
+      "model": "jamandjelly:block/apple/jamming_pot"
+    },
+    "variant=insided,inside=apple,support=false": {
+      "model": "jamandjelly:block/apple/jamming_pot_inside"
+    },
+    "variant=closed,inside=sweetberry,support=true": {
+      "model": "jamandjelly:block/sweetberry/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=sweetberry,support=true": {
+      "model": "jamandjelly:block/sweetberry/jamming_pot_support"
+    },
+    "variant=insided,inside=sweetberry,support=true": {
+      "model": "jamandjelly:block/sweetberry/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=sweetberry,support=false": {
+      "model": "jamandjelly:block/sweetberry/jamming_pot_closed"
+    },
+    "variant=normal,inside=sweetberry,support=false": {
+      "model": "jamandjelly:block/sweetberry/jamming_pot"
+    },
+    "variant=insided,inside=sweetberry,support=false": {
+      "model": "jamandjelly:block/sweetberry/jamming_pot_inside"
+    },
+    "variant=closed,inside=melon,support=true": {
+      "model": "jamandjelly:block/melon/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=melon,support=true": {
+      "model": "jamandjelly:block/melon/jamming_pot_support"
+    },
+    "variant=insided,inside=melon,support=true": {
+      "model": "jamandjelly:block/melon/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=melon,support=false": {
+      "model": "jamandjelly:block/melon/jamming_pot_closed"
+    },
+    "variant=normal,inside=melon,support=false": {
+      "model": "jamandjelly:block/melon/jamming_pot"
+    },
+    "variant=insided,inside=melon,support=false": {
+      "model": "jamandjelly:block/melon/jamming_pot_inside"
+    },
+    "variant=closed,inside=quince,support=true": {
+      "model": "jamandjelly:block/quince/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=quince,support=true": {
+      "model": "jamandjelly:block/quince/jamming_pot_support"
+    },
+    "variant=insided,inside=quince,support=true": {
+      "model": "jamandjelly:block/quince/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=quince,support=false": {
+      "model": "jamandjelly:block/quince/jamming_pot_closed"
+    },
+    "variant=normal,inside=quince,support=false": {
+      "model": "jamandjelly:block/quince/jamming_pot"
+    },
+    "variant=insided,inside=quince,support=false": {
+      "model": "jamandjelly:block/quince/jamming_pot_inside"
+    },
+    "variant=closed,inside=plum,support=true": {
+      "model": "jamandjelly:block/plum/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=plum,support=true": {
+      "model": "jamandjelly:block/plum/jamming_pot_support"
+    },
+    "variant=insided,inside=plum,support=true": {
+      "model": "jamandjelly:block/plum/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=plum,support=false": {
+      "model": "jamandjelly:block/plum/jamming_pot_closed"
+    },
+    "variant=normal,inside=plum,support=false": {
+      "model": "jamandjelly:block/plum/jamming_pot"
+    },
+    "variant=insided,inside=plum,support=false": {
+      "model": "jamandjelly:block/plum/jamming_pot_inside"
+    },
+    "variant=closed,inside=mango,support=true": {
+      "model": "jamandjelly:block/mango/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=mango,support=true": {
+      "model": "jamandjelly:block/mango/jamming_pot_support"
+    },
+    "variant=insided,inside=mango,support=true": {
+      "model": "jamandjelly:block/mango/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=mango,support=false": {
+      "model": "jamandjelly:block/mango/jamming_pot_closed"
+    },
+    "variant=normal,inside=mango,support=false": {
+      "model": "jamandjelly:block/mango/jamming_pot"
+    },
+    "variant=insided,inside=mango,support=false": {
+      "model": "jamandjelly:block/mango/jamming_pot_inside"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "jamandjelly:block/plastic_gray",
+    "side": "jamandjelly:block/plastic_gray",
+    "top": "jamandjelly:block/plastic_gray"
+  }
+}

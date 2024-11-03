@@ -21,7 +21,11 @@ public class ModTags
 
     public static class Items
     {
-        public static final TagKey<Item> EXAMPLE_ITEM_TAG = createTag("example_item_tag");
+        public static final TagKey<Item> JAM_BOTTLES = createTag("jam_bottles");
+
+        public static final TagKey<Item> JAM_INGREDIENTS = createTag("jam_ingredients");
+
+        public static final TagKey<Item> JAM_CHOPPING_INGREDIENTS = createTag("jam_chopping_ingredients");
 
         private static TagKey<Item> createTag(String name)
         {

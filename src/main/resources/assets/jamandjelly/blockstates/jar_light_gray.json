@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "open=true,variant=0,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_0_open"
+    },
+    "open=true,variant=0,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_0_open"
+    },
+    "open=true,variant=0,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_0_open"
+    },
+    "open=true,variant=0,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_0_open"
+    },
+    "open=true,variant=1,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_1_open"
+    },
+    "open=true,variant=1,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_1_open"
+    },
+    "open=true,variant=1,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_1_open"
+    },
+    "open=true,variant=1,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_1_open"
+    },
+    "open=true,variant=2,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_2_open"
+    },
+    "open=true,variant=2,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_2_open"
+    },
+    "open=true,variant=2,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_2_open"
+    },
+    "open=true,variant=2,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_2_open"
+    },
+    "open=true,variant=3,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_3_open"
+    },
+    "open=true,variant=3,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_3_open"
+    },
+    "open=true,variant=3,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_3_open"
+    },
+    "open=true,variant=3,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_3_open"
+    },
+    "open=false,variant=0,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_0"
+    },
+    "open=false,variant=0,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_0"
+    },
+    "open=false,variant=0,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_0"
+    },
+    "open=false,variant=0,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_0"
+    },
+    "open=false,variant=1,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_1"
+    },
+    "open=false,variant=1,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_1"
+    },
+    "open=false,variant=1,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_1"
+    },
+    "open=false,variant=1,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_1"
+    },
+    "open=false,variant=2,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_2"
+    },
+    "open=false,variant=2,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_2"
+    },
+    "open=false,variant=2,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_2"
+    },
+    "open=false,variant=2,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_2"
+    },
+    "open=false,variant=3,inside=apple": {
+      "model": "jamandjelly:block/apple/jar_light_gray_3"
+    },
+    "open=false,variant=3,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/jar_light_gray_3"
+    },
+    "open=false,variant=3,inside=melon": {
+      "model": "jamandjelly:block/melon/jar_light_gray_3"
+    },
+    "open=false,variant=3,inside=honey": {
+      "model": "jamandjelly:block/honey/jar_light_gray_3"
+    }
+  }
+}

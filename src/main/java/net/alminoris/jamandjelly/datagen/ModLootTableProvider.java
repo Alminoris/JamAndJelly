@@ -1,5 +1,7 @@
 package net.alminoris.jamandjelly.datagen;
 
+import net.alminoris.jamandjelly.block.ModBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -20,6 +22,10 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
+import static net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks.WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
+
 public class ModLootTableProvider extends FabricBlockLootTableProvider
 {
     public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup)
@@ -30,7 +36,51 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
     @Override
     public void generate()
     {
-        //addDrop(ModBlocks.OAK_CHISELED);
+        addDrop(ModBlocks.JAR_BLACK);
+        addDrop(ModBlocks.JAR_BROWN);
+        addDrop(ModBlocks.JAR_GRAY);
+        addDrop(ModBlocks.JAR_LIGHT_GRAY);
+        addDrop(ModBlocks.JAR_WHITE);
+        addDrop(ModBlocks.JAR_RED);
+        addDrop(ModBlocks.JAR_ORANGE);
+        addDrop(ModBlocks.JAR_YELLOW);
+        addDrop(ModBlocks.JAR_PURPLE);
+        addDrop(ModBlocks.JAR_MAGENTA);
+        addDrop(ModBlocks.JAR_PINK);
+        addDrop(ModBlocks.JAR_BLUE);
+        addDrop(ModBlocks.JAR_CYAN);
+        addDrop(ModBlocks.JAR_LIGHT_BLUE);
+        addDrop(ModBlocks.JAR_GREEN);
+        addDrop(ModBlocks.JAR_LIME);
+        addDrop(ModBlocks.APPLE_JAM_BLOCK);
+        addDrop(ModBlocks.SWEETBERRY_JAM_BLOCK);
+        addDrop(ModBlocks.MELON_JAM_BLOCK);
+        for(String name : JAM_NAMES)
+            addDrop(IntegrationBlocks.JAM_BLOCKS.get(name));
+        for(String name: PLASTIC_BLOCK_NAMES)
+        {
+            addDrop(ModBlocks.PLASTIC_BLOCKS.get(name));
+            addDrop(ModBlocks.SLABS.get(name));
+            addDrop(ModBlocks.STAIRS.get(name));
+            addDrop(ModBlocks.BUTTONS.get(name));
+            addDrop(ModBlocks.PRESSURE_PLATES.get(name));
+            addDrop(ModBlocks.WALLS.get(name));
+        }
+        addDrop(ModBlocks.KELP_BLOCK);
+        addDrop(ModBlocks.JAMMING_POT);
+        addDrop(ModBlocks.CHOPPING_BOARD_OAK);
+        addDrop(ModBlocks.CHOPPING_BOARD_BIRCH);
+        addDrop(ModBlocks.CHOPPING_BOARD_SPRUCE);
+        addDrop(ModBlocks.CHOPPING_BOARD_JUNGLE);
+        addDrop(ModBlocks.CHOPPING_BOARD_ACACIA);
+        addDrop(ModBlocks.CHOPPING_BOARD_DARK_OAK);
+        addDrop(ModBlocks.CHOPPING_BOARD_CRIMSON);
+        addDrop(ModBlocks.CHOPPING_BOARD_WARPED);
+        addDrop(ModBlocks.CHOPPING_BOARD_MANGROVE);
+        addDrop(ModBlocks.CHOPPING_BOARD_CHERRY);
+        addDrop(ModBlocks.CHOPPING_BOARD_BAMBOO);
+        for(String name : WOOD_NAMES)
+            addDrop(IntegrationBlocks.CHOPPING_BOARDS.get(name));
     }
 
     private LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops)

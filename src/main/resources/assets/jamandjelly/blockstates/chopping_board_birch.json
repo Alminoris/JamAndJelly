@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "knife=true": {
+      "model": "jamandjelly:block/chopping_board_knife_birch"
+    },
+    "knife=false": {
+      "model": "jamandjelly:block/chopping_board_birch"
+    }
+  }
+}

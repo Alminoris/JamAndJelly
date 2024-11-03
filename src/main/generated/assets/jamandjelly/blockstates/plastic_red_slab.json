@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jamandjelly:block/plastic_red_slab"
+    },
+    "type=double": {
+      "model": "jamandjelly:block/plastic_red"
+    },
+    "type=top": {
+      "model": "jamandjelly:block/plastic_red_slab_top"
+    }
+  }
+}

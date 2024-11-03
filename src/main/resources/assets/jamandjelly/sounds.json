@@ -1,3 +1,58 @@
 {
-
+  "block_plastic_break":
+  {
+    "subtitle": "sounds.jamandjelly.block_plastic_break",
+    "sounds":
+    [
+      "jamandjelly:block_plastic_break"
+    ]
+  },
+  "block_plastic_step":
+  {
+    "subtitle": "sounds.jamandjelly.block_plastic_step",
+    "sounds":
+    [
+      "jamandjelly:block_plastic_step"
+    ]
+  },
+  "block_plastic_place":
+  {
+    "subtitle": "sounds.jamandjelly.block_plastic_place",
+    "sounds":
+    [
+      "jamandjelly:block_plastic_place"
+    ]
+  },
+  "block_plastic_hit":
+  {
+    "subtitle": "sounds.jamandjelly.block_plastic_hit",
+    "sounds":
+    [
+      "jamandjelly:block_plastic_hit"
+    ]
+  },
+  "block_plastic_fall":
+  {
+    "subtitle": "sounds.jamandjelly.block_plastic_fall",
+    "sounds":
+    [
+      "jamandjelly:block_plastic_fall"
+    ]
+  },
+  "sound_chop_on_board":
+  {
+    "subtitle": "sounds.jamandjelly.sound_chop_on_board",
+    "sounds":
+    [
+      "jamandjelly:sound_chop_on_board"
+    ]
+  },
+  "sound_jam_boiling":
+  {
+    "subtitle": "sounds.jamandjelly.sound_jam_boiling",
+    "sounds":
+    [
+      "jamandjelly:sound_jam_boiling"
+    ]
+  }
 }

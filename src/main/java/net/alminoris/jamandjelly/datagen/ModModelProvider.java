@@ -1,17 +1,24 @@
 package net.alminoris.jamandjelly.datagen;
 
+import net.alminoris.jamandjelly.JamJelly;
+import net.alminoris.jamandjelly.block.ModBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
+import net.alminoris.jamandjelly.util.helper.JsonHelper;
+import net.alminoris.jamandjelly.util.helper.ModJsonTemplates;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
-import java.util.function.Function;
 
-import static net.minecraft.data.client.BlockStateModelGenerator.createSingletonBlockState;
+import static net.alminoris.jamandjelly.block.ModBlocks.*;
+import static net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks.WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
 
 public class ModModelProvider extends FabricModelProvider
 {
@@ -23,12 +30,148 @@ public class ModModelProvider extends FabricModelProvider
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator)
     {
+        String[] woods = { "oak", "birch", "spruce", "jungle",
+                "acacia", "dark_oak", "crimson", "warped",
+                "mangrove", "cherry", "bamboo" };
+        String[] colors = { "black", "brown", "gray", "light_gray",
+                "white", "red", "orange", "yellow",
+                "purple", "magenta", "pink", "blue",
+                "cyan", "light_blue", "green", "lime" };
+        String[] jams = { "apple", "sweetberry", "melon", "honey" };
 
+        for(String color : colors)
+            for(String jam : jams)
+                registerJar(color, jam);
+
+        blockStateModelGenerator.registerSimpleState(ModBlocks.APPLE_JAM_BLOCK);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.SWEETBERRY_JAM_BLOCK);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.MELON_JAM_BLOCK);
+
+        for(String jam : jams)
+        {
+            if (jam.equals("honey")) break;
+            JsonHelper.createJamBlockModel(ModJsonTemplates.JAM_BLOCK_TEMPLATE, jam);
+            registerJammingPot(jam);
+        }
+
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_BLACK, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_black_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_BROWN, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_brown_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_GRAY, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_gray_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_LIGHT_GRAY, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_light_gray_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_WHITE, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_white_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_RED, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_red_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_ORANGE, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_orange_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_YELLOW, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_yellow_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_PURPLE, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_purple_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_MAGENTA, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_magenta_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_PINK, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_pink_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_BLUE, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_blue_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_CYAN, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_cyan_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_LIGHT_BLUE, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_light_blue_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_GREEN, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_green_0"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_LIME, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_lime_0"));
+
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.APPLE_JAM_BLOCK, Identifier.of(JamJelly.MOD_ID, "block/apple_jam_block"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.SWEETBERRY_JAM_BLOCK, Identifier.of(JamJelly.MOD_ID, "block/sweetberry_jam_block"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.MELON_JAM_BLOCK, Identifier.of(JamJelly.MOD_ID, "block/melon_jam_block"));
+
+        Dictionary<String, BlockStateModelGenerator.BlockTexturePool> plasticBlocksPool = new Hashtable<>()
+        {{
+            for(String name : PLASTIC_BLOCK_NAMES)
+                put(name, blockStateModelGenerator.registerCubeAllModelTexturePool(PLASTIC_BLOCKS.get(name)));
+        }};
+
+        for(String name : PLASTIC_BLOCK_NAMES)
+        {
+            plasticBlocksPool.get(name).slab(SLABS.get(name));
+            plasticBlocksPool.get(name).stairs(STAIRS.get(name));
+            plasticBlocksPool.get(name).button(BUTTONS.get(name));
+            plasticBlocksPool.get(name).pressurePlate(PRESSURE_PLATES.get(name));
+            plasticBlocksPool.get(name).wall(WALLS.get(name));
+        }
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KELP_BLOCK);
+
+        for(String wood : woods)
+        {
+            JsonHelper.createChoppingBoardBlockState(ModJsonTemplates.CHOPPING_BOARD_BS_TEMPLATE, wood);
+            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_KNIFE_TEMPLATE, wood, true);
+            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_TEMPLATE, wood, false);
+        }
+
+        //Integration
+        for(String name : JAM_NAMES)
+        {
+            blockStateModelGenerator.registerSimpleState(IntegrationBlocks.JAM_BLOCKS.get(name));
+            blockStateModelGenerator.registerParentedItemModel(IntegrationBlocks.JAM_BLOCKS.get(name), Identifier.of(JamJelly.MOD_ID, "block/"+name+"_jam_block"));
+            JsonHelper.createJamBlockModel(ModJsonTemplates.JAM_BLOCK_TEMPLATE, name);
+            registerJammingPot(name);
+        }
+
+        for(String name : WOOD_NAMES)
+        {
+            JsonHelper.createChoppingBoardBlockState(ModJsonTemplates.CHOPPING_BOARD_BS_TEMPLATE, name);
+            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_KNIFE_TEMPLATE, name, true);
+            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_TEMPLATE, name, false);
+            blockStateModelGenerator.registerParentedItemModel(IntegrationBlocks.CHOPPING_BOARDS.get(name),
+                    Identifier.of(JamJelly.MOD_ID, "block/chopping_board_"+name));
+        }
+        //Integration
+
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_OAK, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_oak"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_BIRCH, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_birch"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_SPRUCE, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_spruce"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_JUNGLE, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_jungle"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_ACACIA, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_acacia"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_DARK_OAK, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_dark_oak"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_CRIMSON, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_crimson"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_WARPED, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_warped"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_MANGROVE, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_mangrove"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_CHERRY, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_cherry"));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_BAMBOO, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_bamboo"));
+
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAMMING_POT, Identifier.of(JamJelly.MOD_ID, "block/apple/jamming_pot_closed"));
+    }
+
+    private void registerJammingPot(String insideName)
+    {
+        JsonHelper.createJammingPotBlockModel(ModJsonTemplates.JAMMING_POT_TEMPLATE, "", insideName, false);
+        JsonHelper.createJammingPotBlockModel(ModJsonTemplates.JAMMING_POT_CLOSED_TEMPLATE, "closed", insideName, false);
+        JsonHelper.createJammingPotBlockModel(ModJsonTemplates.JAMMING_POT_CLOSED_SUPPORT_TEMPLATE, "closed", insideName, true);
+        JsonHelper.createJammingPotBlockModel(ModJsonTemplates.JAMMING_POT_INSIDE_TEMPLATE, "inside", insideName, false);
+        JsonHelper.createJammingPotBlockModel(ModJsonTemplates.JAMMING_POT_INSIDE_SUPPORT_TEMPLATE, "inside", insideName, true);
+        JsonHelper.createJammingPotBlockModel(ModJsonTemplates.JAMMING_POT_SUPPORT_TEMPLATE, "", insideName, true);
+    }
+
+    private void registerJar(String colorName, String insideName)
+    {
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_0_TEMPLATE, colorName, insideName, false, 0);
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_1_TEMPLATE, colorName, insideName, false, 1);
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_2_TEMPLATE, colorName, insideName, false, 2);
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_3_TEMPLATE, colorName, insideName, false, 3);
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_0_OPEN_TEMPLATE, colorName, insideName, true, 0);
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_1_OPEN_TEMPLATE, colorName, insideName, true, 1);
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_2_OPEN_TEMPLATE, colorName, insideName, true, 2);
+        JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_3_OPEN_TEMPLATE, colorName, insideName, true, 3);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator)
     {
         itemModelGenerator.register(ModItems.KITCHEN_KNIFE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LADLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GELATIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_JAM_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWEETBERRY_JAM_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MELON_JAM_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_CHOPPED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWEETBERRY_CHOPPED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MELON_CHOPPED, Models.GENERATED);
+
+        for(String name : JAM_NAMES)
+        {
+            itemModelGenerator.register(IntegrationItems.JAM_BOTTLES.get(name), Models.GENERATED);
+            itemModelGenerator.register(IntegrationItems.JAM_CHOPPED.get(name), Models.GENERATED);
+        }
     }
 }

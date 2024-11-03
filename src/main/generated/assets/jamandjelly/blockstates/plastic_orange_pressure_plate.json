@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "jamandjelly:block/plastic_orange_pressure_plate"
+    },
+    "powered=true": {
+      "model": "jamandjelly:block/plastic_orange_pressure_plate_down"
+    }
+  }
+}

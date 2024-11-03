@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "jamandjelly:plastic_black"
+    },
+    "/": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "  #",
+    "// ",
+    "/  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "jamandjelly:ladle"
+  }
+}

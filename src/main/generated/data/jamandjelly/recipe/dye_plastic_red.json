@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "plastic",
+  "ingredients": [
+    {
+      "item": "minecraft:green_dye"
+    },
+    [
+      {
+        "item": "jamandjelly:plastic_black"
+      },
+      {
+        "item": "jamandjelly:plastic_brown"
+      },
+      {
+        "item": "jamandjelly:plastic_gray"
+      },
+      {
+        "item": "jamandjelly:plastic_light_gray"
+      },
+      {
+        "item": "jamandjelly:plastic_white"
+      },
+      {
+        "item": "jamandjelly:plastic_orange"
+      },
+      {
+        "item": "jamandjelly:plastic_yellow"
+      },
+      {
+        "item": "jamandjelly:plastic_purple"
+      },
+      {
+        "item": "jamandjelly:plastic_magenta"
+      },
+      {
+        "item": "jamandjelly:plastic_pink"
+      },
+      {
+        "item": "jamandjelly:plastic_blue"
+      },
+      {
+        "item": "jamandjelly:plastic_cyan"
+      },
+      {
+        "item": "jamandjelly:plastic_light_blue"
+      },
+      {
+        "item": "jamandjelly:plastic_green"
+      },
+      {
+        "item": "jamandjelly:plastic_lime"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "jamandjelly:plastic_red"
+  }
+}

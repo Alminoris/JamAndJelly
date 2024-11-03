@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "jamandjelly:block/plastic_lime",
+    "side": "jamandjelly:block/plastic_lime",
+    "top": "jamandjelly:block/plastic_lime"
+  }
+}
