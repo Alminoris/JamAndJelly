@@ -21,7 +21,7 @@ import static net.alminoris.jamandjelly.integration.arborealnature.item.Integrat
 
 public class IntegrationBlocks
 {
-    public static final String[] WOOD_NAMES = { "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango" };
+    public static final String[] WOOD_NAMES = { "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig" };
     public static final Dictionary<String, Block> CHOPPING_BOARDS = new Hashtable<>();
 
     public static final Dictionary<String, Block> JAM_BLOCKS = new Hashtable<>();

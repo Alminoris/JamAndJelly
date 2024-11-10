@@ -4,8 +4,9 @@
   "block.jamandjelly.chopping_board_bamboo": "Бамбукова обробна дошка",
   "block.jamandjelly.chopping_board_birch": "Березова обробна дошка",
   "block.jamandjelly.chopping_board_cherry": "Вишнева обробна дошка",
-  "block.jamandjelly.chopping_board_crimson": "Червона обробна дошка",
+  "block.jamandjelly.chopping_board_crimson": "Багряна обробна дошка",
   "block.jamandjelly.chopping_board_dark_oak": "Темно-дубова обробна дошка",
+  "block.jamandjelly.chopping_board_fig": "Інжирна обробна дошка",
   "block.jamandjelly.chopping_board_hawthorn": "Обробна дошка з глоду",
   "block.jamandjelly.chopping_board_hazelnut": "Обробна дошка з ліщини",
   "block.jamandjelly.chopping_board_hornbeam": "Обробна дошка з граба",
@@ -17,6 +18,7 @@
   "block.jamandjelly.chopping_board_quince": "Обробна дошка з айви",
   "block.jamandjelly.chopping_board_spruce": "Смерекова обробна дошка",
   "block.jamandjelly.chopping_board_warped": "Спотворена обробна дошка",
+  "block.jamandjelly.figs_jam_block": "Блок інжирного джему",
   "block.jamandjelly.jamming_pot": "Горщик для варіння джемів",
   "block.jamandjelly.jar_black": "Банка з чорною кришкою",
   "block.jamandjelly.jar_blue": "Банка з синьою кришкою",
@@ -138,6 +140,8 @@
   "block.jamandjelly.sweetberry_jam_block": "Блок солодкоягідного джему",
   "item.jamandjelly.apple_chopped": "Подрібнене яблуко",
   "item.jamandjelly.apple_jam_bottle": "Пляшка яблучного джему",
+  "item.jamandjelly.figs_chopped": "Нарізаний інжир",
+  "item.jamandjelly.figs_jam_bottle": "Пляшка інжирного джему",
   "item.jamandjelly.gelatin": "Желатин",
   "item.jamandjelly.kitchen_knife": "Кухонний ніж",
   "item.jamandjelly.ladle": "Ополоник",
@@ -153,6 +157,6 @@
   "item.jamandjelly.sweetberry_jam_bottle": "Пляшка солодкоягідного джему",
   "itemgroup.jajtab": "Jam & Jelly",
   "tag.jamandjelly.jam_bottles": "Пляшки з джемом",
-  "tag.jamandjelly.jam_chopping_ingredients": "Інгредієнти для нарізання варення",
-  "tag.jamandjelly.jam_ingredients": "Інгредієнти для варення"
+  "tag.jamandjelly.jam_chopping_ingredients": "Інгредієнти для нарізання",
+  "tag.jamandjelly.jam_ingredients": "Інгредієнти для джему"
 }

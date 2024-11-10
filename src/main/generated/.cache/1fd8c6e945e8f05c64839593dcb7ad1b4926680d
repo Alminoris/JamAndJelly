@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-03T20:43:31.733307	Jam & Jelly/Block Loot Tables
+// 1.21.1	2024-11-10T12:22:11.3397438	Jam & Jelly/Block Loot Tables
 47d7e93acc4095d28fe79d80e7e45adedc6de3aa data\jamandjelly\loot_table\blocks\plastic_brown_pressure_plate.json
 a4cd5f2e8e709416047d773cd2bac72448f5317d data\jamandjelly\loot_table\blocks\plastic_black.json
 25c28af37770d22278318ec080af25b037582048 data\jamandjelly\loot_table\blocks\plastic_green.json
@@ -51,6 +51,7 @@ acc02621dc7b21b6f10bb26ebdf0fbfd8492de22 data\jamandjelly\loot_table\blocks\plas
 a19e14fb5b6cb3a5e1db96b310cab92a0b5c180c data\jamandjelly\loot_table\blocks\plastic_orange.json
 9d16f55a215fc3e80c5ca1952e8a632a300d82f4 data\jamandjelly\loot_table\blocks\plastic_green_button.json
 56aefe2f9a9f835244789fc2f05be570f759010e data\jamandjelly\loot_table\blocks\chopping_board_dark_oak.json
+e185c6740153bc6107d0624fccafc8208945983a data\jamandjelly\loot_table\blocks\figs_jam_block.json
 9fa94daab555d3026560b59b8e83016b2474c785 data\jamandjelly\loot_table\blocks\plum_jam_block.json
 1642427d22bbd345308b141ad983cf7a315c908d data\jamandjelly\loot_table\blocks\jar_gray.json
 e95065753cfe91f1f75026ac2dfe084472e1b166 data\jamandjelly\loot_table\blocks\plastic_yellow_wall.json
@@ -73,8 +74,8 @@ cdfa734dcb9dab72c727cccf5f3b1b145a7f7355 data\jamandjelly\loot_table\blocks\mang
 80ab9d72eb60a27642c79451f46a82f4f4d793a6 data\jamandjelly\loot_table\blocks\plastic_gray_pressure_plate.json
 b5546fc0b5c01c2b66ace96c01b66fafbdd76fb2 data\jamandjelly\loot_table\blocks\jar_purple.json
 4c17aa14c109bc2358a434550108a7c9f21740d3 data\jamandjelly\loot_table\blocks\jamming_pot.json
-3344ea8453b4fd7b9019ac46c2a90d3891cf9eb1 data\jamandjelly\loot_table\blocks\chopping_board_acacia.json
 9a6460f9b1a5980b7cdab5ba3c6a1fdb52ca4255 data\jamandjelly\loot_table\blocks\jar_green.json
+3344ea8453b4fd7b9019ac46c2a90d3891cf9eb1 data\jamandjelly\loot_table\blocks\chopping_board_acacia.json
 54a787e4772b793b1d18442d36ad921e0d116639 data\jamandjelly\loot_table\blocks\plastic_yellow.json
 868db618e6b63f0962eec59e38a7c5a3dabdb810 data\jamandjelly\loot_table\blocks\chopping_board_warped.json
 59edf194e2dd8ae6147a3a5c0162fe5825d0e73c data\jamandjelly\loot_table\blocks\plastic_cyan_pressure_plate.json
@@ -82,6 +83,7 @@ b5546fc0b5c01c2b66ace96c01b66fafbdd76fb2 data\jamandjelly\loot_table\blocks\jar_
 f774efa7439b110ec88923a09827b19bf5aeed1b data\jamandjelly\loot_table\blocks\plastic_pink_button.json
 21c6510fcfcfa153e58a894af35dcae0437acd65 data\jamandjelly\loot_table\blocks\jar_white.json
 61f274b5a6bfb95b1dd5498462719e9709eb2c8c data\jamandjelly\loot_table\blocks\jar_black.json
+457e1c84721c5a715f9db865b9ff88f859100f04 data\jamandjelly\loot_table\blocks\chopping_board_fig.json
 09c43790c84e00945095e21c183eeca025650fa7 data\jamandjelly\loot_table\blocks\plastic_purple_stairs.json
 25cb5acfe8dd822e4ae2ee44dd4592abe3d11ae0 data\jamandjelly\loot_table\blocks\plastic_cyan_stairs.json
 7e0e2b21bf1069b6bd26b718f92bf561b9277a94 data\jamandjelly\loot_table\blocks\plastic_red_pressure_plate.json

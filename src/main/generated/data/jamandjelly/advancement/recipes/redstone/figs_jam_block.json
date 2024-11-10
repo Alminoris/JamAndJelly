@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_figs_jam_bottle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "jamandjelly:figs_jam_bottle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jamandjelly:figs_jam_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_figs_jam_bottle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jamandjelly:figs_jam_block"
+    ]
+  }
+}

@@ -40,6 +40,7 @@ public class ChoppingBoardScreen extends HandledScreen<ChoppingBoardScreenHandle
         put("chopping_board_quince", 0xc78955);
         put("chopping_board_plum", 0x8e656c);
         put("chopping_board_mango", 0xb4733c);
+        put("chopping_board_fig", 0xbc9e80);
     }};
 
     public ChoppingBoardScreen(ChoppingBoardScreenHandler handler, PlayerInventory inventory, Text title)

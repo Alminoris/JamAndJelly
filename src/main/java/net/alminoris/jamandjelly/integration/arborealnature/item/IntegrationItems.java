@@ -13,7 +13,7 @@ import java.util.Hashtable;
 
 public class IntegrationItems
 {
-    public static final String[] JAM_NAMES = { "quince", "plum", "mango" };
+    public static final String[] JAM_NAMES = { "quince", "plum", "mango", "figs" };
     public static final Dictionary<String, Item> JAM_BOTTLES = new Hashtable<>();
     public static final Dictionary<String, Item> JAM_CHOPPED = new Hashtable<>();
 

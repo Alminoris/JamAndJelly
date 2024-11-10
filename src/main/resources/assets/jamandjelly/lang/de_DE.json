@@ -154,5 +154,9 @@
   "itemgroup.jajtab": "Jam & Jelly",
   "tag.jamandjelly.jam_bottles": "Marmeladenflaschen",
   "tag.jamandjelly.jam_chopping_ingredients": "Zutaten für Marmelade-Zerkleinerung",
-  "tag.jamandjelly.jam_ingredients": "Marmelade-Zutaten"
+  "tag.jamandjelly.jam_ingredients": "Marmelade-Zutaten",
+  "block.jamandjelly.chopping_board_fig": "Feigen-Schneidebrett",
+  "block.jamandjelly.figs_jam_block": "Feigenmarmeladenblock",
+  "item.jamandjelly.figs_jam_bottle": "Flasche mit Feigenmarmelade",
+  "item.jamandjelly.figs_chopped": "Gehackte Feigen"
 }

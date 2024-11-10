@@ -6,6 +6,7 @@
   "block.jamandjelly.chopping_board_cherry": "Вишнёвая разделочная доска",
   "block.jamandjelly.chopping_board_crimson": "Багровая разделочная доска",
   "block.jamandjelly.chopping_board_dark_oak": "Тёмно-дубовая разделочная доска",
+  "block.jamandjelly.chopping_board_fig": "Инжирная разделочная доска",
   "block.jamandjelly.chopping_board_hawthorn": "Разделочная доска из боярышника",
   "block.jamandjelly.chopping_board_hazelnut": "Разделочная доска из лещины",
   "block.jamandjelly.chopping_board_hornbeam": "Разделочная доска из граба",
@@ -17,6 +18,7 @@
   "block.jamandjelly.chopping_board_quince": "Разделочная доска из айвы",
   "block.jamandjelly.chopping_board_spruce": "Еловая разделочная доска",
   "block.jamandjelly.chopping_board_warped": "Искажённая разделочная доска",
+  "block.jamandjelly.figs_jam_block": "Блок инжирного джема",
   "block.jamandjelly.jamming_pot": "Горшок для варки джемов",
   "block.jamandjelly.jar_black": "Банка с чёрной крышкой",
   "block.jamandjelly.jar_blue": "Банка с синей крышкой",
@@ -138,6 +140,8 @@
   "block.jamandjelly.sweetberry_jam_block": "Блок сладкоягодного джема",
   "item.jamandjelly.apple_chopped": "Порезанное яблоко",
   "item.jamandjelly.apple_jam_bottle": "Бутылка яблочного джема",
+  "item.jamandjelly.figs_chopped": "Нарезанный инжир",
+  "item.jamandjelly.figs_jam_bottle": "Бутылка инжирного джема",
   "item.jamandjelly.gelatin": "Желатин",
   "item.jamandjelly.kitchen_knife": "Кухонный нож",
   "item.jamandjelly.ladle": "Половник",
@@ -153,6 +157,6 @@
   "item.jamandjelly.sweetberry_jam_bottle": "Бутылка сладкоягодного джема",
   "itemgroup.jajtab": "Jam & Jelly",
   "tag.jamandjelly.jam_bottles": "Бутылки с джемом",
-  "tag.jamandjelly.jam_chopping_ingredients": "Ингредиенты для нарезки варенья",
-  "tag.jamandjelly.jam_ingredients": "Ингредиенты для варенья"
+  "tag.jamandjelly.jam_chopping_ingredients": "Ингредиенты для нарезки",
+  "tag.jamandjelly.jam_ingredients": "Ингредиенты для джема"
 }

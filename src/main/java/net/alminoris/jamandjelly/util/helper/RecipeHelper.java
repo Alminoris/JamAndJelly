@@ -29,7 +29,6 @@ public class RecipeHelper
 
     public boolean hasInput()
     {
-        JamJelly.LOGGER.info("TEST: " + slots.get(0).getItem());
         switch (this.recipeType)
         {
             case "jamming_pot":

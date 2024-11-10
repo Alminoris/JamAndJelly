@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-03T20:43:31.7298052	Jam & Jelly/Recipes
+// 1.21.1	2024-11-10T12:22:11.33729	Jam & Jelly/Recipes
 1e9f6d0fa3c4bf9702445ce20341c75c8266fb20 data\jamandjelly\recipe\plum_jam_bottle.json
 6ba296c1d11b9df2525784ec3f3c5c8da748de76 data\jamandjelly\recipe\jar_green.json
 ae3d4a41f99ddb59f6f9bb43413737cc81e36ae0 data\jamandjelly\advancement\recipes\brewing\jar_black.json
@@ -50,6 +50,7 @@ c76673998d2ea001ffbd9014bc82e385d812acac data\jamandjelly\advancement\recipes\br
 1805fe9e119ed98c26340bd22d1cb193838646e9 data\jamandjelly\advancement\recipes\brewing\jar_blue.json
 9f9d96c6913df40c016bf8bd7775dbec49e4a70a data\jamandjelly\recipe\mango_jam_block.json
 a373b0b83a20910cb93404e7bf5ccb1943950157 data\jamandjelly\advancement\recipes\building_blocks\kelp_block.json
+7e837073f8f6c206a4722753136cd7b4b3bebb2c data\jamandjelly\recipe\figs_jam_bottle.json
 0d796f50ddb24d80ed17d29ae582fe3bf2aca278 data\jamandjelly\recipe\dye_plastic_orange.json
 089deb411ffccc34c932a190f7807e2430a7b2c5 data\jamandjelly\recipe\dye_plastic_white.json
 045e1ff731f50ed2cb6c0aab0ba055209247678e data\jamandjelly\recipe\melon_jam_bottle.json
@@ -69,6 +70,7 @@ d9f2b4bb96a88d6de667c733066a2d7210ddb123 data\jamandjelly\recipe\chopping_board_
 94b6dbb6de9c07053912d15886a6b97d54c61166 data\jamandjelly\advancement\recipes\redstone\plum_jam_block.json
 9cd0ecb4ecd20d9775957f67d663bad79c71887f data\jamandjelly\recipe\sweetberry_jam_block.json
 e48e6a3358e11250c7becbe72ad41224697e3aa9 data\jamandjelly\recipe\plastic_white_from_blasting_dried_kelp_block.json
+1ee0bdbe53f5650ec13b7a5e5e304ce46b64d5b4 data\jamandjelly\advancement\recipes\redstone\figs_jam_block.json
 1ce41317a6a05a29f1653cd8c0c6b86a2d076223 data\jamandjelly\recipe\kitchen_knife.json
 5cbd6ee92683f7c63f040e44afbf9a48fdd94005 data\jamandjelly\recipe\chopping_board_acacia.json
 b9b86c100ab79a194544e6f40b8270b432998248 data\jamandjelly\advancement\recipes\redstone\apple_jam_block.json
@@ -80,11 +82,13 @@ fc7472d720956c68a495042a142ac163f097c520 data\jamandjelly\recipe\jamming_pot.jso
 757c34bbfe7c730eb29fe6012945eafd63bfde2a data\jamandjelly\advancement\recipes\brewing\jar_pink.json
 55d6f91fe77c0997e4f4b6fbcbd11812a5c496f5 data\jamandjelly\recipe\chopping_board_bamboo.json
 9d4703c0db8a05a4cf41f7ef2fc89a31491d729c data\jamandjelly\recipe\chopping_board_birch.json
+f351515fda506cf07d6e1b5ae5b91288e7285b00 data\jamandjelly\advancement\recipes\food\figs_jam_bottle.json
 b839810646f54ae9840e3ff7ae3399bf2e9c7177 data\jamandjelly\advancement\recipes\tools\chopping_board_dark_oak.json
 1b3dfd137d100a0809a9416f660e8969eb518af7 data\jamandjelly\advancement\recipes\food\melon_jam_bottle.json
 28b0d04711446431012311b4820a020bd4e0876f data\jamandjelly\advancement\recipes\building_blocks\dye_plastic_blue.json
 f984eed168429674c67d967cb013e8e2e71c5e12 data\jamandjelly\recipe\chopping_board_cherry.json
 2df6f9963a23788b5dfc101b390ce5f355d52ca3 data\jamandjelly\recipe\melon_jam_block.json
+56c73465eaa0b18958d57efafe8fb69efd7ac761 data\jamandjelly\recipe\figs_jam_block.json
 280f8c2e5c9cba496f4331f87c06cf85e0dcd2ae data\jamandjelly\advancement\recipes\brewing\jar_yellow.json
 2063a51d5097b6846ef736e64a568d5a000b4cbb data\jamandjelly\recipe\dye_plastic_gray.json
 870dcb6498644d62ba7538c54f8ec4704d18bb8b data\jamandjelly\recipe\quince_jam_block.json

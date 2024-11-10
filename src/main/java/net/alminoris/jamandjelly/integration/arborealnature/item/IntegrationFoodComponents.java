@@ -18,6 +18,10 @@ public class IntegrationFoodComponents
     static FoodComponent MANGO_JAM = new FoodComponent.Builder().nutrition(4).saturationModifier(0.9f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 300, 1), 0.3f).build();
 
+    static FoodComponent FIGS_JAM = new FoodComponent.Builder().nutrition(4).saturationModifier(0.8f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 150, 0), 0.25f).build();
+
+
     public static final Dictionary<String, FoodComponent> JAM_FOOD_COMPONENTS = new Hashtable<>();
 
     static
@@ -25,5 +29,6 @@ public class IntegrationFoodComponents
         JAM_FOOD_COMPONENTS.put("quince", QUINCE_JAM);
         JAM_FOOD_COMPONENTS.put("plum", PLUM_JAM);
         JAM_FOOD_COMPONENTS.put("mango", MANGO_JAM);
+        JAM_FOOD_COMPONENTS.put("figs", FIGS_JAM);
     }
 }
