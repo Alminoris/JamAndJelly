@@ -12,7 +12,6 @@ import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.StringIdentifiable;
@@ -32,7 +31,8 @@ public class JammingPotBlock extends BlockWithEntity implements BlockEntityProvi
         MELON("melon"),
         QUINCE("quince"),
         PLUM("plum"),
-        MANGO("mango");
+        MANGO("mango"),
+        FIGS("figs");
 
         private final String name;
 

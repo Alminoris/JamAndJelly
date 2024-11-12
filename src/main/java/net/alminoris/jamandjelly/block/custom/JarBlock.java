@@ -1,8 +1,10 @@
 package net.alminoris.jamandjelly.block.custom;
 
 import net.alminoris.jamandjelly.JamJelly;
+import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.util.ModTags;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,6 +25,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
+import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+
 public class JarBlock extends TransparentBlock
 {
     public enum Inside implements StringIdentifiable
@@ -30,7 +34,11 @@ public class JarBlock extends TransparentBlock
         APPLE("apple"),
         HONEY("honey"),
         SWEETBERRY("sweetberry"),
-        MELON("melon");
+        MELON("melon"),
+        QUINCE("quince"),
+        PLUM("plum"),
+        MANGO("mango"),
+        FIGS("figs");
 
         private final String name;
 
@@ -38,8 +46,17 @@ public class JarBlock extends TransparentBlock
 
         @Override
         public String asString() { return this.name; }
-    }
 
+        public static JarBlock.Inside fromString(String name)
+        {
+            for (JarBlock.Inside inside : JarBlock.Inside.values())
+            {
+                if (inside.name.equalsIgnoreCase(name))
+                    return inside;
+            }
+            throw new IllegalArgumentException("No enum constant for name: " + name);
+        }
+    }
 
     public static final EnumProperty<Inside> INSIDE = EnumProperty.of("inside", Inside.class);
 
@@ -97,6 +114,15 @@ public class JarBlock extends TransparentBlock
                         default -> Inside.HONEY;
                     };
 
+                    if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+                    {
+                        for (String name : JAM_NAMES)
+                        {
+                            if (itemName.equals(name+"_jam_bottle"))
+                                nextInside = Inside.fromString(name);
+                        }
+                    }
+
                     player.getInventory().getMainHandStack().decrement(1);
 
                     world.setBlockState(pos, state.with(OPEN, currentOpen).with(VARIANT, currentVariant+1).with(INSIDE, nextInside));
@@ -119,6 +145,15 @@ public class JarBlock extends TransparentBlock
                     case MELON -> ModItems.MELON_JAM_BOTTLE;
                     default -> Items.HONEY_BOTTLE;
                 };
+
+                if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+                {
+                    for (String name : JAM_NAMES)
+                    {
+                        if (currentInside.asString().equals(name))
+                            newItem = IntegrationItems.JAM_BOTTLES.get(name);
+                    }
+                }
 
                 if (!player.getInventory().insertStack(new ItemStack(newItem)))
                     player.dropItem(new ItemStack(newItem), false);

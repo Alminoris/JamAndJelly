@@ -2,13 +2,11 @@ package net.alminoris.jamandjelly.integration.arborealnature.block;
 
 import net.alminoris.jamandjelly.JamJelly;
 import net.alminoris.jamandjelly.block.custom.ChoppingBoardBlock;
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationFoodComponents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HoneyBlock;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.HoneyBottleItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
