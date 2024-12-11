@@ -33,6 +33,31 @@ public class JsonHelper
         }
     }
 
+    public static void createJuicerBlockModel(String jsonContent, String insideName, int variant)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ JamJelly.MOD_ID+"/models/block/" + insideName;
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "juicer_" + variant + ".json";
+        File modelFile = new File(directory, fileName);
+
+        jsonContent = jsonContent.replace("INSIDE_NAME_VALUE", insideName);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     public static void createJamBlockModel(String jsonContent, String name)
     {
         String projectPath = System.getProperty("user.dir");
@@ -122,6 +147,31 @@ public class JsonHelper
         File modelFile = new File(directory, fileName);
 
         jsonContent = jsonContent.replace("WOOD_NAME_VALUE", name);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createJarBlockState(String jsonContent, String colorName)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ JamJelly.MOD_ID+"/blockstates";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "jar_" + colorName + ".json";
+        File modelFile = new File(directory, fileName);
+
+        jsonContent = jsonContent.replace("COLOR_NAME_VALUE", colorName);
 
         try (FileWriter writer = new FileWriter(modelFile))
         {

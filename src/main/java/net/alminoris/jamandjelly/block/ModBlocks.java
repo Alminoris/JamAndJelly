@@ -1,9 +1,7 @@
 package net.alminoris.jamandjelly.block;
 
 import net.alminoris.jamandjelly.JamJelly;
-import net.alminoris.jamandjelly.block.custom.ChoppingBoardBlock;
-import net.alminoris.jamandjelly.block.custom.JammingPotBlock;
-import net.alminoris.jamandjelly.block.custom.JarBlock;
+import net.alminoris.jamandjelly.block.custom.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -38,13 +36,15 @@ public class ModBlocks
     public static final Block JAR_MAGENTA =  registerBlock("jar_magenta", new JarBlock());
     public static final Block JAR_PINK =  registerBlock("jar_pink", new JarBlock());
 
-    public static final Block APPLE_JAM_BLOCK = registerBlock("apple_jam_block", new HoneyBlock(AbstractBlock.Settings.copy(Blocks.HONEY_BLOCK)));
-    public static final Block SWEETBERRY_JAM_BLOCK = registerBlock("sweetberry_jam_block", new HoneyBlock(AbstractBlock.Settings.copy(Blocks.HONEY_BLOCK)));
-    public static final Block MELON_JAM_BLOCK = registerBlock("melon_jam_block", new HoneyBlock(AbstractBlock.Settings.copy(Blocks.HONEY_BLOCK)));
+    public static final Block APPLE_JAM_BLOCK = registerBlock("apple_jam_block", new JamBlock());
+    public static final Block SWEETBERRY_JAM_BLOCK = registerBlock("sweetberry_jam_block", new JamBlock());
+    public static final Block MELON_JAM_BLOCK = registerBlock("melon_jam_block", new JamBlock());
 
     public static final Block KELP_BLOCK = registerBlock("kelp_block", new Block(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block JAMMING_POT = registerBlock("jamming_pot", new JammingPotBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
+
+    public static final Block JUICER = registerBlock("juicer", new JuicerBlock());
 
     public static final Block CHOPPING_BOARD_OAK = registerBlock("chopping_board_oak", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
     public static final Block CHOPPING_BOARD_BIRCH = registerBlock("chopping_board_birch", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));

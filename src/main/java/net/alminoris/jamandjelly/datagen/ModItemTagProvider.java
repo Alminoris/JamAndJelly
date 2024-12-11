@@ -32,6 +32,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
                 .add(ModItems.MELON_JAM_BOTTLE)
                 .add(Items.HONEY_BOTTLE);
 
+        getOrCreateTagBuilder(ModTags.Items.JUICE_BOTTLES)
+                .add(ModItems.GLASS_APPLE_JUICE_BOTTLE)
+                .add(ModItems.GLASS_SWEETBERRY_JUICE_BOTTLE)
+                .add(ModItems.GLASS_MELON_JUICE_BOTTLE);
+
         getOrCreateTagBuilder(ModTags.Items.JAM_INGREDIENTS)
                 .add(ModItems.APPLE_CHOPPED)
                 .add(ModItems.SWEETBERRY_CHOPPED)
@@ -41,6 +46,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
         {
             getOrCreateTagBuilder(ModTags.Items.JAM_BOTTLES)
                     .add(IntegrationItems.JAM_BOTTLES.get(name));
+
+            getOrCreateTagBuilder(ModTags.Items.JUICE_BOTTLES)
+                    .add(IntegrationItems.JUICE_BOTTLES.get(name));
 
             getOrCreateTagBuilder(ModTags.Items.JAM_INGREDIENTS)
                     .add(IntegrationItems.JAM_CHOPPED.get(name));

@@ -1,6 +1,5 @@
 package net.alminoris.jamandjelly.block.custom;
 
-import net.alminoris.jamandjelly.JamJelly;
 import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.sound.ModSounds;
@@ -25,17 +24,17 @@ import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
 
-public class JarBlock extends TransparentBlock
+public class JuicerBlock extends Block
 {
     public enum Inside implements StringIdentifiable
     {
         APPLE("apple"),
-        HONEY("honey"),
         SWEETBERRY("sweetberry"),
         MELON("melon"),
         QUINCE("quince"),
@@ -56,9 +55,9 @@ public class JarBlock extends TransparentBlock
         @Override
         public String asString() { return this.name; }
 
-        public static JarBlock.Inside fromString(String name)
+        public static JuicerBlock.Inside fromString(String name)
         {
-            for (JarBlock.Inside inside : JarBlock.Inside.values())
+            for (JuicerBlock.Inside inside : JuicerBlock.Inside.values())
             {
                 if (inside.name.equalsIgnoreCase(name))
                     return inside;
@@ -69,30 +68,30 @@ public class JarBlock extends TransparentBlock
 
     public static final EnumProperty<Inside> INSIDE = EnumProperty.of("inside", Inside.class);
 
-    public static final IntProperty VARIANT = IntProperty.of("variant", 0, 3);
+    public static final IntProperty VARIANT = IntProperty.of("variant", 0, 6);
 
-    public static final BooleanProperty OPEN = BooleanProperty.of("open");
+    private static final VoxelShape SHAPE = JuicerBlock.createCuboidShape(3,0,8,13,12,15);
 
-    private static final VoxelShape SHAPE = JarBlock.createCuboidShape(4,0,4,12,12,12);
+    private static final VoxelShape SHAPE1 = JuicerBlock.createCuboidShape(2,0,1,14,4,8);
 
-    public JarBlock()
+    public JuicerBlock()
     {
-        super(AbstractBlock.Settings.create()
-                .instrument(NoteBlockInstrument.HAT)
-                .strength(0.3F)
-                .sounds(BlockSoundGroup.GLASS)
+        super(Settings.create()
+                .instrument(NoteBlockInstrument.BASS)
+                .strength(3.0F)
+                .sounds(BlockSoundGroup.STONE)
                 .nonOpaque()
                 .allowsSpawning(Blocks::never)
                 .solidBlock(Blocks::never)
                 .suffocates(Blocks::never)
                 .blockVision(Blocks::never));
-        this.setDefaultState(this.getStateManager().getDefaultState().with(OPEN, false).with(VARIANT, 0).with(INSIDE, Inside.APPLE));
+        this.setDefaultState(this.getStateManager().getDefaultState().with(VARIANT, 0).with(INSIDE, Inside.APPLE));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder)
     {
-        builder.add(OPEN, VARIANT, INSIDE);
+        builder.add(VARIANT, INSIDE);
     }
 
     @Override
@@ -102,63 +101,53 @@ public class JarBlock extends TransparentBlock
         {
             Item item = player.getInventory().getMainHandStack().getItem();
             String itemName = Registries.ITEM.getId(item).getPath();
-            boolean currentOpen = state.get(OPEN);
             int currentVariant = state.get(VARIANT);
             Inside currentInside = state.get(INSIDE);
 
             if (player.getInventory().getMainHandStack().isEmpty())
             {
-                if(currentOpen)
-                    world.playSound(null, pos, ModSounds.SOUND_JAR_CLOSE, SoundCategory.NEUTRAL);
-                else
-                    world.playSound(null, pos, ModSounds.SOUND_JAR_OPEN, SoundCategory.NEUTRAL);
-                world.setBlockState(pos, state.with(OPEN, !currentOpen).with(VARIANT, currentVariant).with(INSIDE, currentInside));
+                world.setBlockState(pos, state.with(VARIANT, currentVariant).with(INSIDE, currentInside));
             }
 
-            if (player.getInventory().getMainHandStack().isIn(ModTags.Items.JAM_BOTTLES) && (currentVariant < 3) && currentOpen)
+            if (player.getInventory().getMainHandStack().isIn(ModTags.Items.JAM_CHOPPING_INGREDIENTS) && (currentVariant < 6))
             {
-                if (isItemMatchesContent(itemName, currentInside) || (currentVariant == 0))
+                if (currentInside.asString().equals(itemName) || itemName.equals("sweet_berries") || itemName.equals("melon_slice") || (currentVariant == 0))
                 {
-                    world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.NEUTRAL);
+                    world.playSound(null, pos, ModSounds.SOUND_JUICER, SoundCategory.NEUTRAL);
                     Inside nextInside = switch (itemName)
                     {
-                        case "apple_jam_bottle" -> Inside.APPLE;
-                        case "sweetberry_jam_bottle" -> Inside.SWEETBERRY;
-                        case "melon_jam_bottle" -> Inside.MELON;
-                        default -> Inside.HONEY;
+                        case "apple" -> Inside.APPLE;
+                        case "sweet_berries" -> Inside.SWEETBERRY;
+                        default -> Inside.MELON;
                     };
 
                     if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                     {
                         for (String name : JAM_NAMES)
                         {
-                            if (itemName.equals(name+"_jam_bottle"))
+                            if (itemName.equals(name))
                                 nextInside = Inside.fromString(name);
                         }
                     }
 
                     player.getInventory().getMainHandStack().decrement(1);
 
-                    world.setBlockState(pos, state.with(OPEN, currentOpen).with(VARIANT, currentVariant+1).with(INSIDE, nextInside));
-
-                    if (!player.getInventory().insertStack(new ItemStack(Items.GLASS_BOTTLE)))
-                        player.dropItem(new ItemStack(Items.GLASS_BOTTLE), false);
+                    world.setBlockState(pos, state.with(VARIANT, currentVariant+1).with(INSIDE, nextInside));
                 }
             }
 
-            if (player.getInventory().getMainHandStack().isOf(Items.GLASS_BOTTLE) && (currentVariant > 0) && currentOpen)
+            if (player.getInventory().getMainHandStack().isOf(ModItems.GLASS_JUICE_BOTTLE) && (currentVariant > 0))
             {
                 world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL);
                 player.getInventory().getMainHandStack().decrement(1);
 
-                world.setBlockState(pos, state.with(OPEN, currentOpen).with(VARIANT, currentVariant-1).with(INSIDE, currentInside));
+                world.setBlockState(pos, state.with(VARIANT, currentVariant-1).with(INSIDE, currentInside));
 
                 Item newItem = switch (currentInside)
                 {
-                    case APPLE -> ModItems.APPLE_JAM_BOTTLE;
-                    case SWEETBERRY -> ModItems.SWEETBERRY_JAM_BOTTLE;
-                    case MELON -> ModItems.MELON_JAM_BOTTLE;
-                    default -> Items.HONEY_BOTTLE;
+                    case APPLE -> ModItems.GLASS_APPLE_JUICE_BOTTLE;
+                    case SWEETBERRY -> ModItems.GLASS_SWEETBERRY_JUICE_BOTTLE;
+                    default -> ModItems.GLASS_MELON_JUICE_BOTTLE;
                 };
 
                 if (FabricLoader.getInstance().isModLoaded("arborealnature"))
@@ -166,7 +155,7 @@ public class JarBlock extends TransparentBlock
                     for (String name : JAM_NAMES)
                     {
                         if (currentInside.asString().equals(name))
-                            newItem = IntegrationItems.JAM_BOTTLES.get(name);
+                            newItem = IntegrationItems.JUICE_BOTTLES.get(name);
                     }
                 }
 
@@ -177,16 +166,9 @@ public class JarBlock extends TransparentBlock
         return ActionResult.SUCCESS;
     }
 
-    private boolean isItemMatchesContent(String fullName, Inside content)
-    {
-        String contentName = content.asString();
-        String name = fullName.split("_")[0];
-        return name.equals(contentName);
-    }
-
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context)
     {
-        return SHAPE;
+        return VoxelShapes.union(SHAPE, SHAPE1);
     }
 }

@@ -14,4 +14,19 @@ public class ModFoodComponents
 
     public static final FoodComponent MELON_JAM = new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f)
             .statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 300), 0.2f).build();
+
+    public static final FoodComponent APPLE_JUICE = new FoodComponent.Builder()
+            .nutrition(3)
+            .saturationModifier(0.7f)
+            .build();
+
+    public static final FoodComponent SWEETBERRY_JUICE = new FoodComponent.Builder()
+            .nutrition(3)
+            .saturationModifier(0.5f)
+            .build();
+
+    public static final FoodComponent MELON_JUICE = new FoodComponent.Builder()
+            .nutrition(3)
+            .saturationModifier(0.4f)
+            .build();
 }

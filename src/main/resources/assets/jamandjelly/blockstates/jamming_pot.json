@@ -107,6 +107,132 @@
     },
     "variant=insided,inside=mango,support=false": {
       "model": "jamandjelly:block/mango/jamming_pot_inside"
+    },
+    "variant=closed,inside=figs,support=true": {
+      "model": "jamandjelly:block/figs/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=figs,support=true": {
+      "model": "jamandjelly:block/figs/jamming_pot_support"
+    },
+    "variant=insided,inside=figs,support=true": {
+      "model": "jamandjelly:block/figs/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=figs,support=false": {
+      "model": "jamandjelly:block/figs/jamming_pot_closed"
+    },
+    "variant=normal,inside=figs,support=false": {
+      "model": "jamandjelly:block/figs/jamming_pot"
+    },
+    "variant=insided,inside=figs,support=false": {
+      "model": "jamandjelly:block/figs/jamming_pot_inside"
+    },
+    "variant=closed,inside=viburnum,support=true": {
+      "model": "jamandjelly:block/viburnum/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=viburnum,support=true": {
+      "model": "jamandjelly:block/viburnum/jamming_pot_support"
+    },
+    "variant=insided,inside=viburnum,support=true": {
+      "model": "jamandjelly:block/viburnum/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=viburnum,support=false": {
+      "model": "jamandjelly:block/viburnum/jamming_pot_closed"
+    },
+    "variant=normal,inside=viburnum,support=false": {
+      "model": "jamandjelly:block/viburnum/jamming_pot"
+    },
+    "variant=insided,inside=viburnum,support=false": {
+      "model": "jamandjelly:block/viburnum/jamming_pot_inside"
+    },
+    "variant=closed,inside=white_mulberry,support=true": {
+      "model": "jamandjelly:block/white_mulberry/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=white_mulberry,support=true": {
+      "model": "jamandjelly:block/white_mulberry/jamming_pot_support"
+    },
+    "variant=insided,inside=white_mulberry,support=true": {
+      "model": "jamandjelly:block/white_mulberry/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=white_mulberry,support=false": {
+      "model": "jamandjelly:block/white_mulberry/jamming_pot_closed"
+    },
+    "variant=normal,inside=white_mulberry,support=false": {
+      "model": "jamandjelly:block/white_mulberry/jamming_pot"
+    },
+    "variant=insided,inside=white_mulberry,support=false": {
+      "model": "jamandjelly:block/white_mulberry/jamming_pot_inside"
+    },
+    "variant=closed,inside=wild_cherry,support=true": {
+      "model": "jamandjelly:block/wild_cherry/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=wild_cherry,support=true": {
+      "model": "jamandjelly:block/wild_cherry/jamming_pot_support"
+    },
+    "variant=insided,inside=wild_cherry,support=true": {
+      "model": "jamandjelly:block/wild_cherry/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=wild_cherry,support=false": {
+      "model": "jamandjelly:block/wild_cherry/jamming_pot_closed"
+    },
+    "variant=normal,inside=wild_cherry,support=false": {
+      "model": "jamandjelly:block/wild_cherry/jamming_pot"
+    },
+    "variant=insided,inside=wild_cherry,support=false": {
+      "model": "jamandjelly:block/wild_cherry/jamming_pot_inside"
+    },
+    "variant=closed,inside=bilberry,support=true": {
+      "model": "jamandjelly:block/bilberry/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=bilberry,support=true": {
+      "model": "jamandjelly:block/bilberry/jamming_pot_support"
+    },
+    "variant=insided,inside=bilberry,support=true": {
+      "model": "jamandjelly:block/bilberry/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=bilberry,support=false": {
+      "model": "jamandjelly:block/bilberry/jamming_pot_closed"
+    },
+    "variant=normal,inside=bilberry,support=false": {
+      "model": "jamandjelly:block/bilberry/jamming_pot"
+    },
+    "variant=insided,inside=bilberry,support=false": {
+      "model": "jamandjelly:block/bilberry/jamming_pot_inside"
+    },
+    "variant=closed,inside=blackberry,support=true": {
+      "model": "jamandjelly:block/blackberry/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=blackberry,support=true": {
+      "model": "jamandjelly:block/blackberry/jamming_pot_support"
+    },
+    "variant=insided,inside=blackberry,support=true": {
+      "model": "jamandjelly:block/blackberry/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=blackberry,support=false": {
+      "model": "jamandjelly:block/blackberry/jamming_pot_closed"
+    },
+    "variant=normal,inside=blackberry,support=false": {
+      "model": "jamandjelly:block/blackberry/jamming_pot"
+    },
+    "variant=insided,inside=blackberry,support=false": {
+      "model": "jamandjelly:block/blackberry/jamming_pot_inside"
+    },
+    "variant=closed,inside=pink_currant,support=true": {
+      "model": "jamandjelly:block/pink_currant/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=pink_currant,support=true": {
+      "model": "jamandjelly:block/pink_currant/jamming_pot_support"
+    },
+    "variant=insided,inside=pink_currant,support=true": {
+      "model": "jamandjelly:block/pink_currant/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=pink_currant,support=false": {
+      "model": "jamandjelly:block/pink_currant/jamming_pot_closed"
+    },
+    "variant=normal,inside=pink_currant,support=false": {
+      "model": "jamandjelly:block/pink_currant/jamming_pot"
+    },
+    "variant=insided,inside=pink_currant,support=false": {
+      "model": "jamandjelly:block/pink_currant/jamming_pot_inside"
     }
   }
 }

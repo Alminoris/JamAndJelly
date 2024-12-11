@@ -52,7 +52,7 @@ public class JammingPotBlockEntity extends BlockEntity implements ExtendedScreen
     private ItemStack result = null;
     private JammingPotBlock.Inside newInside = JammingPotBlock.Inside.APPLE;
 
-    private int soundMaxTicks = 80;
+    private final int soundMaxTicks = 80;
     private int soundTickCounter = 80;
 
     public JammingPotBlockEntity(BlockPos pos, BlockState state)

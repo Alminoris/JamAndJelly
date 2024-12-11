@@ -54,5 +54,29 @@
     [
       "jamandjelly:sound_jam_boiling"
     ]
+  },
+  "sound_juicer":
+  {
+    "subtitle": "sounds.jamandjelly.sound_juicer",
+    "sounds":
+    [
+      "jamandjelly:sound_juicer"
+    ]
+  },
+  "sound_jar_open":
+  {
+    "subtitle": "sounds.jamandjelly.sound_jar_open",
+    "sounds":
+    [
+      "jamandjelly:sound_jar_open"
+    ]
+  },
+  "sound_jar_close":
+  {
+    "subtitle": "sounds.jamandjelly.sound_jar_close",
+    "sounds":
+    [
+      "jamandjelly:sound_jar_close"
+    ]
   }
 }

@@ -51,6 +51,8 @@ public class JamJellyClient implements ClientModInitializer
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAMMING_POT, RenderLayer.getTranslucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JUICER, RenderLayer.getTranslucent());
+
         HandledScreens.register(ModScreenHandlers.JAMMING_POT_SCREEN_HANDLER, JammingPotScreen::new);
         HandledScreens.register(ModScreenHandlers.CHOPPING_BOARD_SCREEN_HANDLER, ChoppingBoardScreen::new);
 

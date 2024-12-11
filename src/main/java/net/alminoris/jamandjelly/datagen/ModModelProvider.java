@@ -52,6 +52,14 @@ public class ModModelProvider extends FabricModelProvider
             if (jam.equals("honey")) break;
             JsonHelper.createJamBlockModel(ModJsonTemplates.JAM_BLOCK_TEMPLATE, jam);
             registerJammingPot(jam);
+            registerJuicer(jam);
+        }
+
+        blockStateModelGenerator.registerParentedItemModel(JUICER, Identifier.of(JamJelly.MOD_ID, "block/apple/juicer_0"));
+
+        for(String color : colors)
+        {
+            JsonHelper.createJarBlockState(ModJsonTemplates.JAR_BLOCKSTATE_TEMPLATE, color);
         }
 
         blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAR_BLACK, Identifier.of(JamJelly.MOD_ID, "block/apple/jar_black_0"));
@@ -106,6 +114,9 @@ public class ModModelProvider extends FabricModelProvider
             blockStateModelGenerator.registerParentedItemModel(IntegrationBlocks.JAM_BLOCKS.get(name), Identifier.of(JamJelly.MOD_ID, "block/"+name+"_jam_block"));
             JsonHelper.createJamBlockModel(ModJsonTemplates.JAM_BLOCK_TEMPLATE, name);
             registerJammingPot(name);
+            registerJuicer(name);
+            for(String color : colors)
+                registerJar(color, name);
         }
 
         for(String name : WOOD_NAMES)
@@ -155,6 +166,17 @@ public class ModModelProvider extends FabricModelProvider
         JsonHelper.createJarBlockModel(ModJsonTemplates.JAR_3_OPEN_TEMPLATE, colorName, insideName, true, 3);
     }
 
+    private void registerJuicer(String insideName)
+    {
+        JsonHelper.createJuicerBlockModel(ModJsonTemplates.JUICER_0, insideName, 0);
+        JsonHelper.createJuicerBlockModel(ModJsonTemplates.JUICER_1, insideName, 1);
+        JsonHelper.createJuicerBlockModel(ModJsonTemplates.JUICER_2, insideName, 2);
+        JsonHelper.createJuicerBlockModel(ModJsonTemplates.JUICER_3, insideName, 3);
+        JsonHelper.createJuicerBlockModel(ModJsonTemplates.JUICER_4, insideName, 4);
+        JsonHelper.createJuicerBlockModel(ModJsonTemplates.JUICER_5, insideName, 5);
+        JsonHelper.createJuicerBlockModel(ModJsonTemplates.JUICER_6, insideName, 6);
+    }
+
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator)
     {
@@ -167,10 +189,15 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.APPLE_CHOPPED, Models.GENERATED);
         itemModelGenerator.register(ModItems.SWEETBERRY_CHOPPED, Models.GENERATED);
         itemModelGenerator.register(ModItems.MELON_CHOPPED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLASS_JUICE_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLASS_APPLE_JUICE_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLASS_SWEETBERRY_JUICE_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLASS_MELON_JUICE_BOTTLE, Models.GENERATED);
 
         for(String name : JAM_NAMES)
         {
             itemModelGenerator.register(IntegrationItems.JAM_BOTTLES.get(name), Models.GENERATED);
+            itemModelGenerator.register(IntegrationItems.JUICE_BOTTLES.get(name), Models.GENERATED);
             itemModelGenerator.register(IntegrationItems.JAM_CHOPPED.get(name), Models.GENERATED);
         }
     }

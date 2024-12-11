@@ -1,6 +1,7 @@
 package net.alminoris.jamandjelly.integration.arborealnature.item;
 
 import net.alminoris.jamandjelly.JamJelly;
+import net.alminoris.jamandjelly.item.ModFoodComponents;
 import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.HoneyBottleItem;
 import net.minecraft.item.Item;
@@ -13,8 +14,10 @@ import java.util.Hashtable;
 
 public class IntegrationItems
 {
-    public static final String[] JAM_NAMES = { "quince", "plum", "mango", "figs" };
+    public static final String[] JAM_NAMES = { "quince", "plum", "mango", "figs", "viburnum", "white_mulberry",
+            "wild_cherry", "bilberry", "blackberry", "pink_currant" };
     public static final Dictionary<String, Item> JAM_BOTTLES = new Hashtable<>();
+    public static final Dictionary<String, Item> JUICE_BOTTLES = new Hashtable<>();
     public static final Dictionary<String, Item> JAM_CHOPPED = new Hashtable<>();
 
     static
@@ -23,6 +26,9 @@ public class IntegrationItems
         {
             JAM_BOTTLES.put(name, registerItem(name + "_jam_bottle", new HoneyBottleItem(
                     new Item.Settings().maxCount(16).food(IntegrationFoodComponents.JAM_FOOD_COMPONENTS.get(name)))));
+
+            JUICE_BOTTLES.put(name, registerItem("glass_" + name + "_juice_bottle", new HoneyBottleItem(
+                    new Item.Settings().maxCount(16).food(IntegrationFoodComponents.JUICE_FOOD_COMPONENTS.get(name)))));
 
             JAM_CHOPPED.put(name, registerItem(name + "_chopped",
                     new Item(new Item.Settings().food(FoodComponents.SWEET_BERRIES))));

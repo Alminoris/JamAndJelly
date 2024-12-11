@@ -23,6 +23,8 @@ public class ModTags
     {
         public static final TagKey<Item> JAM_BOTTLES = createTag("jam_bottles");
 
+        public static final TagKey<Item> JUICE_BOTTLES = createTag("juice_bottles");
+
         public static final TagKey<Item> JAM_INGREDIENTS = createTag("jam_ingredients");
 
         public static final TagKey<Item> JAM_CHOPPING_INGREDIENTS = createTag("jam_chopping_ingredients");

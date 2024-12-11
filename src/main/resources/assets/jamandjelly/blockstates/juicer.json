@@ -1,0 +1,277 @@
+{
+  "variants": {
+    "variant=0,inside=apple": {
+      "model": "jamandjelly:block/apple/juicer_0"
+    },
+    "variant=1,inside=apple": {
+      "model": "jamandjelly:block/apple/juicer_1"
+    },
+    "variant=2,inside=apple": {
+      "model": "jamandjelly:block/apple/juicer_2"
+    },
+    "variant=3,inside=apple": {
+      "model": "jamandjelly:block/apple/juicer_3"
+    },
+    "variant=4,inside=apple": {
+      "model": "jamandjelly:block/apple/juicer_4"
+    },
+    "variant=5,inside=apple": {
+      "model": "jamandjelly:block/apple/juicer_5"
+    },
+    "variant=6,inside=apple": {
+      "model": "jamandjelly:block/apple/juicer_6"
+    },
+    "variant=0,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/juicer_0"
+    },
+    "variant=1,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/juicer_1"
+    },
+    "variant=2,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/juicer_2"
+    },
+    "variant=3,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/juicer_3"
+    },
+    "variant=4,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/juicer_4"
+    },
+    "variant=5,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/juicer_5"
+    },
+    "variant=6,inside=sweetberry": {
+      "model": "jamandjelly:block/sweetberry/juicer_6"
+    },
+    "variant=0,inside=melon": {
+      "model": "jamandjelly:block/melon/juicer_0"
+    },
+    "variant=1,inside=melon": {
+      "model": "jamandjelly:block/melon/juicer_1"
+    },
+    "variant=2,inside=melon": {
+      "model": "jamandjelly:block/melon/juicer_2"
+    },
+    "variant=3,inside=melon": {
+      "model": "jamandjelly:block/melon/juicer_3"
+    },
+    "variant=4,inside=melon": {
+      "model": "jamandjelly:block/melon/juicer_4"
+    },
+    "variant=5,inside=melon": {
+      "model": "jamandjelly:block/melon/juicer_5"
+    },
+    "variant=6,inside=melon": {
+      "model": "jamandjelly:block/melon/juicer_6"
+    },
+    "variant=0,inside=quince": {
+      "model": "jamandjelly:block/quince/juicer_0"
+    },
+    "variant=1,inside=quince": {
+      "model": "jamandjelly:block/quince/juicer_1"
+    },
+    "variant=2,inside=quince": {
+      "model": "jamandjelly:block/quince/juicer_2"
+    },
+    "variant=3,inside=quince": {
+      "model": "jamandjelly:block/quince/juicer_3"
+    },
+    "variant=4,inside=quince": {
+      "model": "jamandjelly:block/quince/juicer_4"
+    },
+    "variant=5,inside=quince": {
+      "model": "jamandjelly:block/quince/juicer_5"
+    },
+    "variant=6,inside=quince": {
+      "model": "jamandjelly:block/quince/juicer_6"
+    },
+    "variant=0,inside=plum": {
+      "model": "jamandjelly:block/plum/juicer_0"
+    },
+    "variant=1,inside=plum": {
+      "model": "jamandjelly:block/plum/juicer_1"
+    },
+    "variant=2,inside=plum": {
+      "model": "jamandjelly:block/plum/juicer_2"
+    },
+    "variant=3,inside=plum": {
+      "model": "jamandjelly:block/plum/juicer_3"
+    },
+    "variant=4,inside=plum": {
+      "model": "jamandjelly:block/plum/juicer_4"
+    },
+    "variant=5,inside=plum": {
+      "model": "jamandjelly:block/plum/juicer_5"
+    },
+    "variant=6,inside=plum": {
+      "model": "jamandjelly:block/plum/juicer_6"
+    },
+    "variant=0,inside=mango": {
+      "model": "jamandjelly:block/mango/juicer_0"
+    },
+    "variant=1,inside=mango": {
+      "model": "jamandjelly:block/mango/juicer_1"
+    },
+    "variant=2,inside=mango": {
+      "model": "jamandjelly:block/mango/juicer_2"
+    },
+    "variant=3,inside=mango": {
+      "model": "jamandjelly:block/mango/juicer_3"
+    },
+    "variant=4,inside=mango": {
+      "model": "jamandjelly:block/mango/juicer_4"
+    },
+    "variant=5,inside=mango": {
+      "model": "jamandjelly:block/mango/juicer_5"
+    },
+    "variant=6,inside=mango": {
+      "model": "jamandjelly:block/mango/juicer_6"
+    },
+    "variant=0,inside=figs": {
+      "model": "jamandjelly:block/figs/juicer_0"
+    },
+    "variant=1,inside=figs": {
+      "model": "jamandjelly:block/figs/juicer_1"
+    },
+    "variant=2,inside=figs": {
+      "model": "jamandjelly:block/figs/juicer_2"
+    },
+    "variant=3,inside=figs": {
+      "model": "jamandjelly:block/figs/juicer_3"
+    },
+    "variant=4,inside=figs": {
+      "model": "jamandjelly:block/figs/juicer_4"
+    },
+    "variant=5,inside=figs": {
+      "model": "jamandjelly:block/figs/juicer_5"
+    },
+    "variant=6,inside=figs": {
+      "model": "jamandjelly:block/figs/juicer_6"
+    },
+    "variant=0,inside=viburnum": {
+      "model": "jamandjelly:block/viburnum/juicer_0"
+    },
+    "variant=1,inside=viburnum": {
+      "model": "jamandjelly:block/viburnum/juicer_1"
+    },
+    "variant=2,inside=viburnum": {
+      "model": "jamandjelly:block/viburnum/juicer_2"
+    },
+    "variant=3,inside=viburnum": {
+      "model": "jamandjelly:block/viburnum/juicer_3"
+    },
+    "variant=4,inside=viburnum": {
+      "model": "jamandjelly:block/viburnum/juicer_4"
+    },
+    "variant=5,inside=viburnum": {
+      "model": "jamandjelly:block/viburnum/juicer_5"
+    },
+    "variant=6,inside=viburnum": {
+      "model": "jamandjelly:block/viburnum/juicer_6"
+    },
+    "variant=0,inside=white_mulberry": {
+      "model": "jamandjelly:block/white_mulberry/juicer_0"
+    },
+    "variant=1,inside=white_mulberry": {
+      "model": "jamandjelly:block/white_mulberry/juicer_1"
+    },
+    "variant=2,inside=white_mulberry": {
+      "model": "jamandjelly:block/white_mulberry/juicer_2"
+    },
+    "variant=3,inside=white_mulberry": {
+      "model": "jamandjelly:block/white_mulberry/juicer_3"
+    },
+    "variant=4,inside=white_mulberry": {
+      "model": "jamandjelly:block/white_mulberry/juicer_4"
+    },
+    "variant=5,inside=white_mulberry": {
+      "model": "jamandjelly:block/white_mulberry/juicer_5"
+    },
+    "variant=6,inside=white_mulberry": {
+      "model": "jamandjelly:block/white_mulberry/juicer_6"
+    },
+    "variant=0,inside=wild_cherry": {
+      "model": "jamandjelly:block/wild_cherry/juicer_0"
+    },
+    "variant=1,inside=wild_cherry": {
+      "model": "jamandjelly:block/wild_cherry/juicer_1"
+    },
+    "variant=2,inside=wild_cherry": {
+      "model": "jamandjelly:block/wild_cherry/juicer_2"
+    },
+    "variant=3,inside=wild_cherry": {
+      "model": "jamandjelly:block/wild_cherry/juicer_3"
+    },
+    "variant=4,inside=wild_cherry": {
+      "model": "jamandjelly:block/wild_cherry/juicer_4"
+    },
+    "variant=5,inside=wild_cherry": {
+      "model": "jamandjelly:block/wild_cherry/juicer_5"
+    },
+    "variant=6,inside=wild_cherry": {
+      "model": "jamandjelly:block/wild_cherry/juicer_6"
+    },
+    "variant=0,inside=bilberry": {
+      "model": "jamandjelly:block/bilberry/juicer_0"
+    },
+    "variant=1,inside=bilberry": {
+      "model": "jamandjelly:block/bilberry/juicer_1"
+    },
+    "variant=2,inside=bilberry": {
+      "model": "jamandjelly:block/bilberry/juicer_2"
+    },
+    "variant=3,inside=bilberry": {
+      "model": "jamandjelly:block/bilberry/juicer_3"
+    },
+    "variant=4,inside=bilberry": {
+      "model": "jamandjelly:block/bilberry/juicer_4"
+    },
+    "variant=5,inside=bilberry": {
+      "model": "jamandjelly:block/bilberry/juicer_5"
+    },
+    "variant=6,inside=bilberry": {
+      "model": "jamandjelly:block/bilberry/juicer_6"
+    },
+    "variant=0,inside=lberry": {
+      "model": "jamandjelly:block/blackberry/juicer_0"
+    },
+    "variant=1,inside=blackberry": {
+      "model": "jamandjelly:block/blackberry/juicer_1"
+    },
+    "variant=2,inside=blackberry": {
+      "model": "jamandjelly:block/blackberry/juicer_2"
+    },
+    "variant=3,inside=blackberry": {
+      "model": "jamandjelly:block/blackberry/juicer_3"
+    },
+    "variant=4,inside=blackberry": {
+      "model": "jamandjelly:block/blackberry/juicer_4"
+    },
+    "variant=5,inside=blackberry": {
+      "model": "jamandjelly:block/blackberry/juicer_5"
+    },
+    "variant=6,inside=blackberry": {
+      "model": "jamandjelly:block/blackberry/juicer_6"
+    },
+    "variant=0,inside=pink_currant": {
+      "model": "jamandjelly:block/pink_currant/juicer_0"
+    },
+    "variant=1,inside=pink_currant": {
+      "model": "jamandjelly:block/pink_currant/juicer_1"
+    },
+    "variant=2,inside=pink_currant": {
+      "model": "jamandjelly:block/pink_currant/juicer_2"
+    },
+    "variant=3,inside=pink_currant": {
+      "model": "jamandjelly:block/pink_currant/juicer_3"
+    },
+    "variant=4,inside=pink_currant": {
+      "model": "jamandjelly:block/pink_currant/juicer_4"
+    },
+    "variant=5,inside=pink_currant": {
+      "model": "jamandjelly:block/pink_currant/juicer_5"
+    },
+    "variant=6,inside=pink_currant": {
+      "model": "jamandjelly:block/pink_currant/juicer_6"
+    }
+  }
+}

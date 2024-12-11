@@ -26,6 +26,7 @@ public class ModItemGroups
                     .icon(() -> new ItemStack(Items.SWEET_BERRIES)).entries((displayContext, entries) ->
                     {
                         entries.add(ModBlocks.JAMMING_POT);
+                        entries.add(ModBlocks.JUICER);
                         entries.add(ModBlocks.CHOPPING_BOARD_OAK);
                         entries.add(ModBlocks.CHOPPING_BOARD_BIRCH);
                         entries.add(ModBlocks.CHOPPING_BOARD_SPRUCE);
@@ -52,6 +53,14 @@ public class ModItemGroups
                             for(String name : JAM_NAMES)
                                 entries.add(IntegrationItems.JAM_BOTTLES.get(name));
                         }
+                        entries.add(ModItems.GLASS_APPLE_JUICE_BOTTLE);
+                        entries.add(ModItems.GLASS_SWEETBERRY_JUICE_BOTTLE);
+                        entries.add(ModItems.GLASS_MELON_JUICE_BOTTLE);
+                        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+                        {
+                            for(String name : JAM_NAMES)
+                                entries.add(IntegrationItems.JUICE_BOTTLES.get(name));
+                        }
                         entries.add(ModBlocks.APPLE_JAM_BLOCK);
                         entries.add(ModBlocks.SWEETBERRY_JAM_BLOCK);
                         entries.add(ModBlocks.MELON_JAM_BLOCK);
@@ -70,6 +79,7 @@ public class ModItemGroups
                         }
                         entries.add(ModItems.GELATIN);
                         entries.add(ModBlocks.KELP_BLOCK);
+                        entries.add(ModItems.GLASS_JUICE_BOTTLE);
                         entries.add(ModBlocks.JAR_BLACK);
                         entries.add(ModBlocks.JAR_BROWN);
                         entries.add(ModBlocks.JAR_GRAY);

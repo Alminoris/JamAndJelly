@@ -16,6 +16,9 @@ public class ModSounds
     public static final SoundEvent BLOCK_PLASTIC_FALL = registerSoundEvent("block_plastic_fall");
     public static final SoundEvent SOUND_CHOP_ON_BOARD = registerSoundEvent("sound_chop_on_board");
     public static final SoundEvent SOUND_JAM_BOILING = registerSoundEvent("sound_jam_boiling");
+    public static final SoundEvent SOUND_JUICER = registerSoundEvent("sound_juicer");
+    public static final SoundEvent SOUND_JAR_OPEN = registerSoundEvent("sound_jar_open");
+    public static final SoundEvent SOUND_JAR_CLOSE = registerSoundEvent("sound_jar_close");
 
     public static final BlockSoundGroup PLASTIC_SOUND_GROUP = new BlockSoundGroup(1.0f, 1.0f,
             BLOCK_PLASTIC_BREAK,

@@ -32,7 +32,13 @@ public class JammingPotBlock extends BlockWithEntity implements BlockEntityProvi
         QUINCE("quince"),
         PLUM("plum"),
         MANGO("mango"),
-        FIGS("figs");
+        FIGS("figs"),
+        VIBURNUM("viburnum"),
+        WHITE_MULBERRY("white_mulberry"),
+        WILD_CHERRY("wild_cherry"),
+        BILBERRY("bilberry"),
+        BLACKBERRY("blackberry"),
+        PINK_CURRANT("pink_currant");;
 
         private final String name;
 

@@ -190,13 +190,32 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
                 .offerTo(recipeExporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BREWING, ModBlocks.JAMMING_POT, 4)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BREWING, ModItems.GLASS_JUICE_BOTTLE, 2)
+                .pattern("# #")
+                .pattern(" # ")
+                .input('#', Blocks.GLASS_PANE)
+                .criterion(hasItem(Blocks.GLASS_PANE), conditionsFromItem(Blocks.GLASS_PANE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BREWING, ModBlocks.JAMMING_POT, 1)
                 .pattern("#/#")
                 .pattern(" # ")
                 .input('#', Items.IRON_INGOT)
                 .input('/', Blocks.IRON_BLOCK)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .criterion(hasItem(Blocks.IRON_BLOCK), conditionsFromItem(Blocks.IRON_BLOCK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BREWING, ModBlocks.JUICER, 1)
+                .pattern(" / ")
+                .pattern("*/*")
+                .pattern("###")
+                .input('#', Blocks.SMOOTH_STONE_SLAB)
+                .input('*', Blocks.GRAY_CONCRETE)
+                .input('/', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Blocks.GRAY_CONCRETE), conditionsFromItem(Blocks.GRAY_CONCRETE))
+                .criterion(hasItem(Blocks.SMOOTH_STONE_SLAB), conditionsFromItem(Blocks.SMOOTH_STONE_SLAB))
                 .offerTo(recipeExporter);
     }
 

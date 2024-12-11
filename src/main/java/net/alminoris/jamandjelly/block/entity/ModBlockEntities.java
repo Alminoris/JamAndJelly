@@ -37,7 +37,10 @@ public class ModBlockEntities
                             IntegrationBlocks.CHOPPING_BOARDS.get("quince"),
                             IntegrationBlocks.CHOPPING_BOARDS.get("plum"),
                             IntegrationBlocks.CHOPPING_BOARDS.get("mango"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("fig")).build());
+                            IntegrationBlocks.CHOPPING_BOARDS.get("fig"),
+                            IntegrationBlocks.CHOPPING_BOARDS.get("viburnum"),
+                            IntegrationBlocks.CHOPPING_BOARDS.get("white_mulberry"),
+                            IntegrationBlocks.CHOPPING_BOARDS.get("wild_cherry")).build());
 
     public static void registerBlockEntities()
     {

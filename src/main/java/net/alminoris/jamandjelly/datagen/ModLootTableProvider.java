@@ -68,6 +68,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
         }
         addDrop(ModBlocks.KELP_BLOCK);
         addDrop(ModBlocks.JAMMING_POT);
+        addDrop(ModBlocks.JUICER);
         addDrop(ModBlocks.CHOPPING_BOARD_OAK);
         addDrop(ModBlocks.CHOPPING_BOARD_BIRCH);
         addDrop(ModBlocks.CHOPPING_BOARD_SPRUCE);
