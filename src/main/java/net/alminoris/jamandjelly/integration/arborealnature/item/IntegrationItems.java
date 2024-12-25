@@ -15,10 +15,11 @@ import java.util.Hashtable;
 public class IntegrationItems
 {
     public static final String[] JAM_NAMES = { "quince", "plum", "mango", "figs", "viburnum", "white_mulberry",
-            "wild_cherry", "bilberry", "blackberry", "pink_currant" };
+            "wild_cherry", "bilberry", "blackberry", "pink_currant", "blueberry" };
     public static final Dictionary<String, Item> JAM_BOTTLES = new Hashtable<>();
     public static final Dictionary<String, Item> JUICE_BOTTLES = new Hashtable<>();
     public static final Dictionary<String, Item> JAM_CHOPPED = new Hashtable<>();
+    public static final Dictionary<String, Item> JELLY = new Hashtable<>();
 
     static
     {
@@ -32,6 +33,9 @@ public class IntegrationItems
 
             JAM_CHOPPED.put(name, registerItem(name + "_chopped",
                     new Item(new Item.Settings().food(FoodComponents.SWEET_BERRIES))));
+
+            JELLY.put(name, registerItem(name + "_jelly",
+                    new Item(new Item.Settings().food(ModFoodComponents.JELLY))));
         }
     }
 

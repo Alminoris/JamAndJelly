@@ -231,7 +231,7 @@
     "variant=6,inside=bilberry": {
       "model": "jamandjelly:block/bilberry/juicer_6"
     },
-    "variant=0,inside=lberry": {
+    "variant=0,inside=blackberry": {
       "model": "jamandjelly:block/blackberry/juicer_0"
     },
     "variant=1,inside=blackberry": {
@@ -272,6 +272,27 @@
     },
     "variant=6,inside=pink_currant": {
       "model": "jamandjelly:block/pink_currant/juicer_6"
+    },
+    "variant=0,inside=blueberry": {
+      "model": "jamandjelly:block/blueberry/juicer_0"
+    },
+    "variant=1,inside=blueberry": {
+      "model": "jamandjelly:block/blueberry/juicer_1"
+    },
+    "variant=2,inside=blueberry": {
+      "model": "jamandjelly:block/blueberry/juicer_2"
+    },
+    "variant=3,inside=blueberry": {
+      "model": "jamandjelly:block/blueberry/juicer_3"
+    },
+    "variant=4,inside=blueberry": {
+      "model": "jamandjelly:block/blueberry/juicer_4"
+    },
+    "variant=5,inside=blueberry": {
+      "model": "jamandjelly:block/blueberry/juicer_5"
+    },
+    "variant=6,inside=blueberry": {
+      "model": "jamandjelly:block/blueberry/juicer_6"
     }
   }
 }

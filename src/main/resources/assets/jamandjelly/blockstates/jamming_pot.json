@@ -233,6 +233,24 @@
     },
     "variant=insided,inside=pink_currant,support=false": {
       "model": "jamandjelly:block/pink_currant/jamming_pot_inside"
+    },
+    "variant=closed,inside=blueberry,support=true": {
+      "model": "jamandjelly:block/blueberry/jamming_pot_closed_support"
+    },
+    "variant=normal,inside=blueberry,support=true": {
+      "model": "jamandjelly:block/blueberry/jamming_pot_support"
+    },
+    "variant=insided,inside=blueberry,support=true": {
+      "model": "jamandjelly:block/blueberry/jamming_pot_inside_support"
+    },
+    "variant=closed,inside=blueberry,support=false": {
+      "model": "jamandjelly:block/blueberry/jamming_pot_closed"
+    },
+    "variant=normal,inside=blueberry,support=false": {
+      "model": "jamandjelly:block/blueberry/jamming_pot"
+    },
+    "variant=insided,inside=blueberry,support=false": {
+      "model": "jamandjelly:block/blueberry/jamming_pot_inside"
     }
   }
 }

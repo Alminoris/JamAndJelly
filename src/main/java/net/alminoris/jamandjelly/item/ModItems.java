@@ -1,11 +1,9 @@
 package net.alminoris.jamandjelly.item;
 
 import net.alminoris.jamandjelly.JamJelly;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
-import net.minecraft.item.HoneyBottleItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ToolItem;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -23,6 +21,10 @@ public class ModItems
     public static final Item APPLE_CHOPPED = registerItem("apple_chopped", new Item(new Item.Settings().food(FoodComponents.SWEET_BERRIES)));
     public static final Item SWEETBERRY_CHOPPED = registerItem("sweetberry_chopped", new Item(new Item.Settings().food(FoodComponents.SWEET_BERRIES)));
     public static final Item MELON_CHOPPED = registerItem("melon_chopped", new Item(new Item.Settings().food(FoodComponents.SWEET_BERRIES)));
+
+    public static final Item APPLE_JELLY = registerItem("apple_jelly", new Item(new Item.Settings().food(ModFoodComponents.JELLY)));
+    public static final Item SWEETBERRY_JELLY = registerItem("sweetberry_jelly", new Item(new Item.Settings().food(ModFoodComponents.JELLY)));
+    public static final Item MELON_JELLY = registerItem("melon_jelly", new Item(new Item.Settings().food(ModFoodComponents.JELLY)));
 
     public static final Item GLASS_JUICE_BOTTLE = registerItem("glass_juice_bottle", new Item(new Item.Settings()));
     public static final Item GLASS_APPLE_JUICE_BOTTLE = registerItem("glass_apple_juice_bottle", new HoneyBottleItem(new Item.Settings().maxCount(16).food(ModFoodComponents.APPLE_JUICE)));

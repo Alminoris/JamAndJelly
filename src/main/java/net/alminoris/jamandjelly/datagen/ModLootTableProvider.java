@@ -55,8 +55,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
         addDrop(ModBlocks.APPLE_JAM_BLOCK);
         addDrop(ModBlocks.SWEETBERRY_JAM_BLOCK);
         addDrop(ModBlocks.MELON_JAM_BLOCK);
+        addDrop(ModBlocks.APPLE_JELLY_BLOCK);
+        addDrop(ModBlocks.SWEETBERRY_JELLY_BLOCK);
+        addDrop(ModBlocks.MELON_JELLY_BLOCK);
         for(String name : JAM_NAMES)
             addDrop(IntegrationBlocks.JAM_BLOCKS.get(name));
+
+        for(String name : JAM_NAMES)
+            addDrop(IntegrationBlocks.JELLY_BLOCKS.get(name));
+
         for(String name: PLASTIC_BLOCK_NAMES)
         {
             addDrop(ModBlocks.PLASTIC_BLOCKS.get(name));

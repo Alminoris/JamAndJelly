@@ -1,13 +1,9 @@
 package net.alminoris.jamandjelly.util.helper;
 
-import net.alminoris.jamandjelly.JamJelly;
-import net.alminoris.jamandjelly.block.custom.JammingPotBlock;
 import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.util.ModTags;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
@@ -21,6 +17,8 @@ public class RecipeHelper
 {
     private final List<ItemStack> slots;
     private final String recipeType;
+    private String jammingPotRecipeType;
+
     public RecipeHelper(String recipeType, ItemStack... slots)
     {
         this.recipeType = recipeType;
@@ -32,10 +30,18 @@ public class RecipeHelper
         switch (this.recipeType)
         {
             case "jamming_pot":
-                return slots.get(0).isIn(ModTags.Items.JAM_INGREDIENTS) &&
-                        slots.get(1).getItem() == Items.SUGAR &&
-                        slots.get(2).getItem() == ModItems.GELATIN &&
-                        slots.get(3).getItem() == Items.GLASS_BOTTLE;
+                if (slots.get(0).isIn(ModTags.Items.JAM_INGREDIENTS) && slots.get(3).getItem() == Items.GLASS_BOTTLE)
+                {
+                    this.jammingPotRecipeType = "jam";
+                    return slots.get(1).getItem() == Items.SUGAR && slots.get(2).getItem() == ModItems.GELATIN;
+                }
+                else if (slots.get(0).isIn(ModTags.Items.JUICE_BOTTLES) && slots.get(3).getItem() == Items.BOWL)
+                {
+                    this.jammingPotRecipeType = "jelly";
+                    return slots.get(1).getItem() == Items.SUGAR && slots.get(2).getItem() == ModItems.GELATIN && slots.get(2).getCount() >= 3;
+                }
+                else
+                    return false;
             case "chopping_board":
                 return slots.get(0).isIn(ModTags.Items.JAM_CHOPPING_INGREDIENTS);
             default: return false;
@@ -44,21 +50,42 @@ public class RecipeHelper
 
     public ItemStack getResult()
     {
-        if ("jamming_pot".equals(this.recipeType))
+        if ("jamming_pot".equals(this.recipeType) && !this.jammingPotRecipeType.isEmpty())
         {
             ItemStack inputItem = slots.get(0);
-            if (inputItem.getItem() == ModItems.APPLE_CHOPPED)
-                return new ItemStack(ModItems.APPLE_JAM_BOTTLE);
-            if (inputItem.getItem() == ModItems.SWEETBERRY_CHOPPED)
-                return new ItemStack(ModItems.SWEETBERRY_JAM_BOTTLE);
-            if (inputItem.getItem() == ModItems.MELON_CHOPPED)
-                return new ItemStack(ModItems.MELON_JAM_BOTTLE);
-            if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+
+            if (this.jammingPotRecipeType.equals("jam"))
             {
-                for (String name : JAM_NAMES)
+                if (inputItem.getItem() == ModItems.APPLE_CHOPPED)
+                    return new ItemStack(ModItems.APPLE_JAM_BOTTLE);
+                if (inputItem.getItem() == ModItems.SWEETBERRY_CHOPPED)
+                    return new ItemStack(ModItems.SWEETBERRY_JAM_BOTTLE);
+                if (inputItem.getItem() == ModItems.MELON_CHOPPED)
+                    return new ItemStack(ModItems.MELON_JAM_BOTTLE);
+                if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                 {
-                    if (inputItem.getItem() == IntegrationItems.JAM_CHOPPED.get(name))
-                        return new ItemStack(IntegrationItems.JAM_BOTTLES.get(name));
+                    for (String name : JAM_NAMES)
+                    {
+                        if (inputItem.getItem() == IntegrationItems.JAM_CHOPPED.get(name))
+                            return new ItemStack(IntegrationItems.JAM_BOTTLES.get(name));
+                    }
+                }
+            }
+            else if (this.jammingPotRecipeType.equals("jelly"))
+            {
+                if (inputItem.getItem() == ModItems.GLASS_APPLE_JUICE_BOTTLE)
+                    return new ItemStack(ModItems.APPLE_JELLY);
+                if (inputItem.getItem() == ModItems.GLASS_SWEETBERRY_JUICE_BOTTLE)
+                    return new ItemStack(ModItems.SWEETBERRY_JELLY);
+                if (inputItem.getItem() == ModItems.GLASS_MELON_JUICE_BOTTLE)
+                    return new ItemStack(ModItems.MELON_JELLY);
+                if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+                {
+                    for (String name : JAM_NAMES)
+                    {
+                        if (inputItem.getItem() == IntegrationItems.JUICE_BOTTLES.get(name))
+                            return new ItemStack(IntegrationItems.JELLY.get(name));
+                    }
                 }
             }
         }

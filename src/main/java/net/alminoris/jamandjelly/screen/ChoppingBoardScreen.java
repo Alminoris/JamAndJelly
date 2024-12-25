@@ -44,6 +44,7 @@ public class ChoppingBoardScreen extends HandledScreen<ChoppingBoardScreenHandle
         put("chopping_board_viburnum", 0x895943);
         put("chopping_board_white_mulberry", 0xc1a630);
         put("chopping_board_wild_cherry", 0xd49549);
+        put("chopping_board_pine", 0xa88e65);
     }};
 
     public ChoppingBoardScreen(ChoppingBoardScreenHandler handler, PlayerInventory inventory, Text title)

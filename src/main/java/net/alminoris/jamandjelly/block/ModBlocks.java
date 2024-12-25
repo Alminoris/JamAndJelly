@@ -40,6 +40,10 @@ public class ModBlocks
     public static final Block SWEETBERRY_JAM_BLOCK = registerBlock("sweetberry_jam_block", new JamBlock());
     public static final Block MELON_JAM_BLOCK = registerBlock("melon_jam_block", new JamBlock());
 
+    public static final Block APPLE_JELLY_BLOCK = registerBlock("apple_jelly_block", new JellyBlock(AbstractBlock.Settings.copy(Blocks.SLIME_BLOCK)));
+    public static final Block SWEETBERRY_JELLY_BLOCK = registerBlock("sweetberry_jelly_block", new JellyBlock(AbstractBlock.Settings.copy(Blocks.SLIME_BLOCK)));
+    public static final Block MELON_JELLY_BLOCK = registerBlock("melon_jelly_block", new JellyBlock(AbstractBlock.Settings.copy(Blocks.SLIME_BLOCK)));
+
     public static final Block KELP_BLOCK = registerBlock("kelp_block", new Block(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block JAMMING_POT = registerBlock("jamming_pot", new JammingPotBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));

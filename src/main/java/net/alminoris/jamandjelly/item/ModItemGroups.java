@@ -61,6 +61,14 @@ public class ModItemGroups
                             for(String name : JAM_NAMES)
                                 entries.add(IntegrationItems.JUICE_BOTTLES.get(name));
                         }
+                        entries.add(ModItems.APPLE_JELLY);
+                        entries.add(ModItems.SWEETBERRY_JELLY);
+                        entries.add(ModItems.MELON_JELLY);
+                        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+                        {
+                            for(String name : JAM_NAMES)
+                                entries.add(IntegrationItems.JELLY.get(name));
+                        }
                         entries.add(ModBlocks.APPLE_JAM_BLOCK);
                         entries.add(ModBlocks.SWEETBERRY_JAM_BLOCK);
                         entries.add(ModBlocks.MELON_JAM_BLOCK);
@@ -68,6 +76,14 @@ public class ModItemGroups
                         {
                             for(String name : JAM_NAMES)
                                 entries.add(IntegrationBlocks.JAM_BLOCKS.get(name));
+                        }
+                        entries.add(ModBlocks.APPLE_JELLY_BLOCK);
+                        entries.add(ModBlocks.SWEETBERRY_JELLY_BLOCK);
+                        entries.add(ModBlocks.MELON_JELLY_BLOCK);
+                        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+                        {
+                            for(String name : JAM_NAMES)
+                                entries.add(IntegrationBlocks.JELLY_BLOCKS.get(name));
                         }
                         entries.add(ModItems.APPLE_CHOPPED);
                         entries.add(ModItems.SWEETBERRY_CHOPPED);

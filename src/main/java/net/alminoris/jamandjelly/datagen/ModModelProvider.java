@@ -47,6 +47,10 @@ public class ModModelProvider extends FabricModelProvider
         blockStateModelGenerator.registerSimpleState(ModBlocks.SWEETBERRY_JAM_BLOCK);
         blockStateModelGenerator.registerSimpleState(ModBlocks.MELON_JAM_BLOCK);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.APPLE_JELLY_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SWEETBERRY_JELLY_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MELON_JELLY_BLOCK);
+
         for(String jam : jams)
         {
             if (jam.equals("honey")) break;
@@ -110,6 +114,7 @@ public class ModModelProvider extends FabricModelProvider
         //Integration
         for(String name : JAM_NAMES)
         {
+            blockStateModelGenerator.registerSimpleCubeAll(IntegrationBlocks.JELLY_BLOCKS.get(name));
             blockStateModelGenerator.registerSimpleState(IntegrationBlocks.JAM_BLOCKS.get(name));
             blockStateModelGenerator.registerParentedItemModel(IntegrationBlocks.JAM_BLOCKS.get(name), Identifier.of(JamJelly.MOD_ID, "block/"+name+"_jam_block"));
             JsonHelper.createJamBlockModel(ModJsonTemplates.JAM_BLOCK_TEMPLATE, name);
@@ -193,11 +198,15 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.GLASS_APPLE_JUICE_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLASS_SWEETBERRY_JUICE_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GLASS_MELON_JUICE_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_JELLY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWEETBERRY_JELLY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MELON_JELLY, Models.GENERATED);
 
         for(String name : JAM_NAMES)
         {
             itemModelGenerator.register(IntegrationItems.JAM_BOTTLES.get(name), Models.GENERATED);
             itemModelGenerator.register(IntegrationItems.JUICE_BOTTLES.get(name), Models.GENERATED);
+            itemModelGenerator.register(IntegrationItems.JELLY.get(name), Models.GENERATED);
             itemModelGenerator.register(IntegrationItems.JAM_CHOPPED.get(name), Models.GENERATED);
         }
     }

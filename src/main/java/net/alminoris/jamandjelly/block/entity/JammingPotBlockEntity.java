@@ -18,7 +18,6 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
@@ -218,9 +217,13 @@ public class JammingPotBlockEntity extends BlockEntity implements ExtendedScreen
 
     private void craftItem()
     {
-        this.removeStack(INPUT_SLOT_0, 1);
+
         this.removeStack(INPUT_SLOT_1, 1);
-        this.removeStack(INPUT_SLOT_2, 1);
+        if (this.getStack(INPUT_SLOT_0).isIn(ModTags.Items.JUICE_BOTTLES))
+            this.removeStack(INPUT_SLOT_2, 3);
+        else
+            this.removeStack(INPUT_SLOT_2, 1);
+        this.removeStack(INPUT_SLOT_0, 1);
         this.removeStack(INPUT_SLOT_3, 1);
 
         ItemStack ladleItem = this.getStack(INPUT_SLOT_4);
@@ -255,11 +258,11 @@ public class JammingPotBlockEntity extends BlockEntity implements ExtendedScreen
 
         if (hasInputRes)
         {
-            if (result.getItem() == ModItems.APPLE_JAM_BOTTLE)
+            if (result.getItem() == ModItems.APPLE_JAM_BOTTLE || result.getItem() == ModItems.APPLE_JELLY)
                 newInside = JammingPotBlock.Inside.APPLE;
-            else if (result.getItem() == ModItems.SWEETBERRY_JAM_BOTTLE)
+            else if (result.getItem() == ModItems.SWEETBERRY_JAM_BOTTLE || result.getItem() == ModItems.SWEETBERRY_JELLY)
                 newInside = JammingPotBlock.Inside.SWEETBERRY;
-            else if (result.getItem() == ModItems.MELON_JAM_BOTTLE)
+            else if (result.getItem() == ModItems.MELON_JAM_BOTTLE || result.getItem() == ModItems.MELON_JELLY)
                 newInside = JammingPotBlock.Inside.MELON;
             else
             {
@@ -267,7 +270,7 @@ public class JammingPotBlockEntity extends BlockEntity implements ExtendedScreen
                 {
                     for (String name : JAM_NAMES)
                     {
-                        if (result.getItem() == IntegrationItems.JAM_BOTTLES.get(name))
+                        if (result.getItem() == IntegrationItems.JAM_BOTTLES.get(name) || result.getItem() == IntegrationItems.JELLY.get(name))
                         {
                             newInside = JammingPotBlock.Inside.fromString(name);
                             break;

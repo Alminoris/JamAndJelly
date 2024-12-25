@@ -3,6 +3,7 @@ package net.alminoris.jamandjelly.integration.arborealnature.block;
 import net.alminoris.jamandjelly.JamJelly;
 import net.alminoris.jamandjelly.block.custom.ChoppingBoardBlock;
 import net.alminoris.jamandjelly.block.custom.JamBlock;
+import net.alminoris.jamandjelly.block.custom.JellyBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -20,10 +21,11 @@ import static net.alminoris.jamandjelly.integration.arborealnature.item.Integrat
 
 public class IntegrationBlocks
 {
-    public static final String[] WOOD_NAMES = { "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry" };
+    public static final String[] WOOD_NAMES = { "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry", "pine" };
     public static final Dictionary<String, Block> CHOPPING_BOARDS = new Hashtable<>();
 
     public static final Dictionary<String, Block> JAM_BLOCKS = new Hashtable<>();
+    public static final Dictionary<String, Block> JELLY_BLOCKS = new Hashtable<>();
 
     static
     {
@@ -35,6 +37,7 @@ public class IntegrationBlocks
         for(String name : JAM_NAMES)
         {
             JAM_BLOCKS.put(name, registerBlock(name+"_jam_block", new JamBlock()));
+            JELLY_BLOCKS.put(name, registerBlock(name+"_jelly_block", new JellyBlock(AbstractBlock.Settings.copy(Blocks.SLIME_BLOCK))));
         }
     }
 

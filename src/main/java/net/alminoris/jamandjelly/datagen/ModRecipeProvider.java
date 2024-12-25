@@ -1,7 +1,6 @@
 package net.alminoris.jamandjelly.datagen;
 
 import com.google.common.collect.ImmutableList;
-import net.alminoris.jamandjelly.JamJelly;
 import net.alminoris.jamandjelly.block.ModBlocks;
 import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
 import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
@@ -16,14 +15,11 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 
 import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
 import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
@@ -115,6 +111,27 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .criterion(hasItem(ModItems.MELON_JAM_BOTTLE), conditionsFromItem(ModItems.MELON_JAM_BOTTLE))
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.APPLE_JELLY_BLOCK, 1)
+                .pattern("##")
+                .pattern("##")
+                .input('#', ModItems.APPLE_JELLY)
+                .criterion(hasItem(ModItems.APPLE_JELLY), conditionsFromItem(ModItems.APPLE_JELLY))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.SWEETBERRY_JELLY_BLOCK, 1)
+                .pattern("##")
+                .pattern("##")
+                .input('#', ModItems.SWEETBERRY_JELLY)
+                .criterion(hasItem(ModItems.SWEETBERRY_JELLY), conditionsFromItem(ModItems.SWEETBERRY_JELLY))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.MELON_JELLY_BLOCK, 1)
+                .pattern("##")
+                .pattern("##")
+                .input('#', ModItems.MELON_JELLY)
+                .criterion(hasItem(ModItems.MELON_JELLY), conditionsFromItem(ModItems.MELON_JELLY))
+                .offerTo(recipeExporter);
+
         for(String name : JAM_NAMES)
         {
             ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, IntegrationBlocks.JAM_BLOCKS.get(name), 1)
@@ -125,10 +142,24 @@ public class ModRecipeProvider extends FabricRecipeProvider
                     .offerTo(recipeExporter);
 
             ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, IntegrationItems.JAM_BOTTLES.get(name), 4)
-                    .input(ModBlocks.APPLE_JAM_BLOCK)
+                    .input(IntegrationBlocks.JAM_BLOCKS.get(name))
                     .input(Items.GLASS_BOTTLE, 4)
                     .criterion(hasItem(IntegrationBlocks.JAM_BLOCKS.get(name)), conditionsFromItem(IntegrationBlocks.JAM_BLOCKS.get(name)))
                     .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
+                    .offerTo(recipeExporter);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, IntegrationBlocks.JELLY_BLOCKS.get(name), 1)
+                    .pattern("##")
+                    .pattern("##")
+                    .input('#', IntegrationItems.JELLY.get(name))
+                    .criterion(hasItem(IntegrationItems.JELLY.get(name)), conditionsFromItem(IntegrationItems.JELLY.get(name)))
+                    .offerTo(recipeExporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, IntegrationItems.JELLY.get(name), 4)
+                    .input(IntegrationBlocks.JELLY_BLOCKS.get(name))
+                    .input(Items.BOWL, 4)
+                    .criterion(hasItem(IntegrationBlocks.JELLY_BLOCKS.get(name)), conditionsFromItem(IntegrationBlocks.JELLY_BLOCKS.get(name)))
+                    .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
                     .offerTo(recipeExporter);
         }
 
@@ -188,6 +219,27 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .input(Items.GLASS_BOTTLE, 4)
                 .criterion(hasItem(ModBlocks.MELON_JAM_BLOCK), conditionsFromItem(ModBlocks.MELON_JAM_BLOCK))
                 .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
+                .offerTo(recipeExporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.APPLE_JELLY, 4)
+                .input(ModBlocks.APPLE_JELLY_BLOCK)
+                .input(Items.BOWL, 4)
+                .criterion(hasItem(ModBlocks.APPLE_JELLY_BLOCK), conditionsFromItem(ModBlocks.APPLE_JELLY_BLOCK))
+                .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                .offerTo(recipeExporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SWEETBERRY_JELLY, 4)
+                .input(ModBlocks.SWEETBERRY_JELLY_BLOCK)
+                .input(Items.BOWL, 4)
+                .criterion(hasItem(ModBlocks.SWEETBERRY_JELLY_BLOCK), conditionsFromItem(ModBlocks.SWEETBERRY_JELLY_BLOCK))
+                .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                .offerTo(recipeExporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MELON_JELLY, 4)
+                .input(ModBlocks.MELON_JELLY_BLOCK)
+                .input(Items.BOWL, 4)
+                .criterion(hasItem(ModBlocks.MELON_JELLY_BLOCK), conditionsFromItem(ModBlocks.MELON_JELLY_BLOCK))
+                .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BREWING, ModItems.GLASS_JUICE_BOTTLE, 2)

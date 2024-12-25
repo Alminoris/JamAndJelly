@@ -9489,6 +9489,30 @@ public class ModJsonTemplates
                  },
                  "open=false,variant=3,inside=pink_currant": {
                    "model": "jamandjelly:block/pink_currant/jar_COLOR_NAME_VALUE_3"
+                 },
+                 "open=true,variant=0,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_0_open"
+                 },
+                 "open=true,variant=1,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_1_open"
+                 },
+                 "open=true,variant=2,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_2_open"
+                 },
+                 "open=true,variant=3,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_3_open"
+                 },
+                 "open=false,variant=0,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_0"
+                 },
+                 "open=false,variant=1,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_1"
+                 },
+                 "open=false,variant=2,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_2"
+                 },
+                 "open=false,variant=3,inside=blueberry": {
+                   "model": "jamandjelly:block/blueberry/jar_COLOR_NAME_VALUE_3"
                  }
                }
              }

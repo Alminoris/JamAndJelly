@@ -43,10 +43,17 @@ public class JamJellyClient implements ClientModInitializer
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SWEETBERRY_JAM_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MELON_JAM_BLOCK, RenderLayer.getTranslucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLE_JELLY_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SWEETBERRY_JELLY_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MELON_JELLY_BLOCK, RenderLayer.getTranslucent());
+
         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
         {
             for(String name : JAM_NAMES)
                 BlockRenderLayerMap.INSTANCE.putBlock(IntegrationBlocks.JAM_BLOCKS.get(name), RenderLayer.getTranslucent());
+
+            for(String name : JAM_NAMES)
+                BlockRenderLayerMap.INSTANCE.putBlock(IntegrationBlocks.JELLY_BLOCKS.get(name), RenderLayer.getTranslucent());
         }
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAMMING_POT, RenderLayer.getTranslucent());

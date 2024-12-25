@@ -4,13 +4,11 @@ import net.alminoris.jamandjelly.block.entity.JammingPotBlockEntity;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.network.BlockPosPayload;
 import net.alminoris.jamandjelly.util.ModTags;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -98,7 +96,7 @@ public class JammingPotScreenHandler extends ScreenHandler
             }
             else
             {
-                if (originalStack.isIn(ModTags.Items.JAM_INGREDIENTS))
+                if (originalStack.isIn(ModTags.Items.JAM_INGREDIENTS) || originalStack.isIn(ModTags.Items.JUICE_BOTTLES))
                 {
                     if (!this.insertItem(originalStack, 0, 1, false)) return ItemStack.EMPTY;
                 }
@@ -110,7 +108,7 @@ public class JammingPotScreenHandler extends ScreenHandler
                 {
                     if (!this.insertItem(originalStack, 2, 3, false)) return ItemStack.EMPTY;
                 }
-                else if (originalStack.isOf(Items.GLASS_BOTTLE))
+                else if (originalStack.isOf(Items.GLASS_BOTTLE) || originalStack.isOf(Items.BOWL))
                 {
                     if (!this.insertItem(originalStack, 3, 4, false)) return ItemStack.EMPTY;
                 }
