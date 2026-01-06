@@ -11,7 +11,7 @@
 		"homepage": "https://github.com/Alminoris/JamAndJelly",
 		"sources": "https://github.com/Alminoris/JamAndJelly"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/jamandjelly/icon.png",
 	"environment": "*",
 	"entrypoints": {
