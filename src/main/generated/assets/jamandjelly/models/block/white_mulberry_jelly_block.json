@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "jamandjelly:block/white_mulberry_jelly_block"
+  }
+}

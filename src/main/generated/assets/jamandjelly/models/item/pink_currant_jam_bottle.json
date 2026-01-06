@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "jamandjelly:item/pink_currant_jam_bottle"
+  }
+}

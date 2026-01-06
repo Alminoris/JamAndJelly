@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jamandjelly:viburnum_jelly_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_viburnum_jelly": {
+      "conditions": {
+        "items": [
+          {
+            "items": "jamandjelly:viburnum_jelly"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_viburnum_jelly"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jamandjelly:viburnum_jelly_block"
+    ]
+  }
+}

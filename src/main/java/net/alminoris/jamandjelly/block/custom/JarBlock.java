@@ -1,7 +1,7 @@
 package net.alminoris.jamandjelly.block.custom;
 
-import net.alminoris.jamandjelly.JamJelly;
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.sound.ModSounds;
 import net.alminoris.jamandjelly.util.ModTags;
@@ -28,7 +28,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 
 public class JarBlock extends TransparentBlock
 {
@@ -47,7 +48,8 @@ public class JarBlock extends TransparentBlock
         WILD_CHERRY("wild_cherry"),
         BILBERRY("bilberry"),
         BLACKBERRY("blackberry"),
-        PINK_CURRANT("pink_currant");
+        PINK_CURRANT("pink_currant"),
+        BLUEBERRY("blueberry");
 
         private final String name;
 
@@ -130,7 +132,16 @@ public class JarBlock extends TransparentBlock
 
                     if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                     {
-                        for (String name : JAM_NAMES)
+                        for (String name : AN_JAM_NAMES)
+                        {
+                            if (itemName.equals(name+"_jam_bottle"))
+                                nextInside = Inside.fromString(name);
+                        }
+                    }
+
+                    if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                    {
+                        for (String name : WF_JAM_NAMES)
                         {
                             if (itemName.equals(name+"_jam_bottle"))
                                 nextInside = Inside.fromString(name);
@@ -163,10 +174,19 @@ public class JarBlock extends TransparentBlock
 
                 if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                 {
-                    for (String name : JAM_NAMES)
+                    for (String name : AN_JAM_NAMES)
                     {
                         if (currentInside.asString().equals(name))
-                            newItem = IntegrationItems.JAM_BOTTLES.get(name);
+                            newItem = ANIntegrationItems.AN_JAM_BOTTLES.get(name);
+                    }
+                }
+
+                if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                {
+                    for (String name : WF_JAM_NAMES)
+                    {
+                        if (currentInside.asString().equals(name))
+                            newItem = WFIntegrationItems.WF_JAM_BOTTLES.get(name);
                     }
                 }
 
@@ -180,7 +200,11 @@ public class JarBlock extends TransparentBlock
     private boolean isItemMatchesContent(String fullName, Inside content)
     {
         String contentName = content.asString();
-        String name = fullName.split("_")[0];
+        String name;
+        if (fullName.split("_").length > 3)
+            name = fullName.split("_")[0]+"_"+fullName.split("_")[1];
+        else
+            name = fullName.split("_")[0];
         return name.equals(contentName);
     }
 

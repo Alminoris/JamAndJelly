@@ -228,5 +228,10 @@
   "item.jamandjelly.blueberry_chopped": "Нарізана лохина",
   "block.jamandjelly.blueberry_jelly_block": "Блок лохинового желе",
   "block.jamandjelly.blueberry_jam_block": "Блок лохинового джему",
-  "block.jamandjelly.chopping_board_pine": "Соснова обробна дошка"
+  "block.jamandjelly.chopping_board_bauhinia": "Баухінійська обробна дошка",
+  "block.jamandjelly.chopping_board_pine": "Соснова обробна дошка",
+  "block.jamandjelly.chopping_board_olive": "Оливкова обробна дошка",
+  "block.jamandjelly.chopping_board_tamarisk": "Тамаріскова обробна дошка",
+  "block.jamandjelly.chopping_board_fir": "Ялицева обробна дошка",
+  "block.jamandjelly.chopping_board_cedar": "Кедрова обробна дошка"
 }

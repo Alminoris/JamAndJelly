@@ -1,6 +1,7 @@
 package net.alminoris.jamandjelly.util.helper;
 
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.util.ModTags;
 import net.fabricmc.loader.api.FabricLoader;
@@ -11,7 +12,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 
 public class RecipeHelper
 {
@@ -64,10 +66,18 @@ public class RecipeHelper
                     return new ItemStack(ModItems.MELON_JAM_BOTTLE);
                 if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                 {
-                    for (String name : JAM_NAMES)
+                    for (String name : AN_JAM_NAMES)
                     {
-                        if (inputItem.getItem() == IntegrationItems.JAM_CHOPPED.get(name))
-                            return new ItemStack(IntegrationItems.JAM_BOTTLES.get(name));
+                        if (inputItem.getItem() == ANIntegrationItems.AN_JAM_CHOPPED.get(name))
+                            return new ItemStack(ANIntegrationItems.AN_JAM_BOTTLES.get(name));
+                    }
+                }
+                if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                {
+                    for (String name : WF_JAM_NAMES)
+                    {
+                        if (inputItem.getItem() == WFIntegrationItems.WF_JAM_CHOPPED.get(name))
+                            return new ItemStack(WFIntegrationItems.WF_JAM_BOTTLES.get(name));
                     }
                 }
             }
@@ -81,10 +91,18 @@ public class RecipeHelper
                     return new ItemStack(ModItems.MELON_JELLY);
                 if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                 {
-                    for (String name : JAM_NAMES)
+                    for (String name : AN_JAM_NAMES)
                     {
-                        if (inputItem.getItem() == IntegrationItems.JUICE_BOTTLES.get(name))
-                            return new ItemStack(IntegrationItems.JELLY.get(name));
+                        if (inputItem.getItem() == ANIntegrationItems.AN_JUICE_BOTTLES.get(name))
+                            return new ItemStack(ANIntegrationItems.AN_JELLY.get(name));
+                    }
+                }
+                if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                {
+                    for (String name : WF_JAM_NAMES)
+                    {
+                        if (inputItem.getItem() == WFIntegrationItems.WF_JUICE_BOTTLES.get(name))
+                            return new ItemStack(WFIntegrationItems.WF_JELLY.get(name));
                     }
                 }
             }
@@ -100,10 +118,18 @@ public class RecipeHelper
                 return new ItemStack(ModItems.MELON_CHOPPED);
             if (FabricLoader.getInstance().isModLoaded("arborealnature"))
             {
-                for (String name : JAM_NAMES)
+                for (String name : AN_JAM_NAMES)
                 {
                     if (inputItem.getItem() == Registries.ITEM.get(Identifier.of("arborealnature", name)))
-                        return new ItemStack(IntegrationItems.JAM_CHOPPED.get(name));
+                        return new ItemStack(ANIntegrationItems.AN_JAM_CHOPPED.get(name));
+                }
+            }
+            if (FabricLoader.getInstance().isModLoaded("wildfields"))
+            {
+                for (String name : WF_JAM_NAMES)
+                {
+                    if (inputItem.getItem() == Registries.ITEM.get(Identifier.of("wildfields", name)))
+                        return new ItemStack(WFIntegrationItems.WF_JAM_CHOPPED.get(name));
                 }
             }
         }

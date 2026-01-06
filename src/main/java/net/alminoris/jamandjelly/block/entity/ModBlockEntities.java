@@ -2,14 +2,13 @@ package net.alminoris.jamandjelly.block.entity;
 
 import net.alminoris.jamandjelly.JamJelly;
 import net.alminoris.jamandjelly.block.ModBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-
-import java.util.List;
 
 public class ModBlockEntities
 {
@@ -31,17 +30,22 @@ public class ModBlockEntities
                             ModBlocks.CHOPPING_BOARD_MANGROVE,
                             ModBlocks.CHOPPING_BOARD_CHERRY,
                             ModBlocks.CHOPPING_BOARD_BAMBOO,
-                            IntegrationBlocks.CHOPPING_BOARDS.get("hazelnut"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("hornbeam"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("hawthorn"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("quince"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("plum"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("mango"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("fig"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("viburnum"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("white_mulberry"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("wild_cherry"),
-                            IntegrationBlocks.CHOPPING_BOARDS.get("pine")).build());
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("hazelnut"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("hornbeam"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("hawthorn"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("quince"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("plum"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("mango"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("fig"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("viburnum"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("white_mulberry"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("wild_cherry"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("bauhinia"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("pine"),
+                            WFIntegrationBlocks.WF_CHOPPING_BOARDS.get("olive"),
+                            WFIntegrationBlocks.WF_CHOPPING_BOARDS.get("tamarisk"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("fir"),
+                            ANIntegrationBlocks.AN_CHOPPING_BOARDS.get("cedar")).build());
 
     public static void registerBlockEntities()
     {

@@ -2,8 +2,10 @@ package net.alminoris.jamandjelly.datagen;
 
 import net.alminoris.jamandjelly.JamJelly;
 import net.alminoris.jamandjelly.block.ModBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.util.helper.JsonHelper;
 import net.alminoris.jamandjelly.util.helper.ModJsonTemplates;
@@ -16,8 +18,10 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 
 import static net.alminoris.jamandjelly.block.ModBlocks.*;
-import static net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks.WOOD_NAMES;
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks.AN_WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks.WF_WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
 
 public class ModModelProvider extends FabricModelProvider
@@ -112,11 +116,11 @@ public class ModModelProvider extends FabricModelProvider
         }
 
         //Integration
-        for(String name : JAM_NAMES)
+        for(String name : AN_JAM_NAMES)
         {
-            blockStateModelGenerator.registerSimpleCubeAll(IntegrationBlocks.JELLY_BLOCKS.get(name));
-            blockStateModelGenerator.registerSimpleState(IntegrationBlocks.JAM_BLOCKS.get(name));
-            blockStateModelGenerator.registerParentedItemModel(IntegrationBlocks.JAM_BLOCKS.get(name), Identifier.of(JamJelly.MOD_ID, "block/"+name+"_jam_block"));
+            blockStateModelGenerator.registerSimpleCubeAll(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name));
+            blockStateModelGenerator.registerSimpleState(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name));
+            blockStateModelGenerator.registerParentedItemModel(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name), Identifier.of(JamJelly.MOD_ID, "block/"+name+"_jam_block"));
             JsonHelper.createJamBlockModel(ModJsonTemplates.JAM_BLOCK_TEMPLATE, name);
             registerJammingPot(name);
             registerJuicer(name);
@@ -124,12 +128,33 @@ public class ModModelProvider extends FabricModelProvider
                 registerJar(color, name);
         }
 
-        for(String name : WOOD_NAMES)
+        for(String name : WF_JAM_NAMES)
+        {
+            blockStateModelGenerator.registerSimpleCubeAll(WFIntegrationBlocks.WF_JELLY_BLOCKS.get(name));
+            blockStateModelGenerator.registerSimpleState(WFIntegrationBlocks.WF_JAM_BLOCKS.get(name));
+            blockStateModelGenerator.registerParentedItemModel(WFIntegrationBlocks.WF_JAM_BLOCKS.get(name), Identifier.of(JamJelly.MOD_ID, "block/"+name+"_jam_block"));
+            JsonHelper.createJamBlockModel(ModJsonTemplates.JAM_BLOCK_TEMPLATE, name);
+            registerJammingPot(name);
+            registerJuicer(name);
+            for(String color : colors)
+                registerJar(color, name);
+        }
+
+        for(String name : AN_WOOD_NAMES)
         {
             JsonHelper.createChoppingBoardBlockState(ModJsonTemplates.CHOPPING_BOARD_BS_TEMPLATE, name);
             JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_KNIFE_TEMPLATE, name, true);
             JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_TEMPLATE, name, false);
-            blockStateModelGenerator.registerParentedItemModel(IntegrationBlocks.CHOPPING_BOARDS.get(name),
+            blockStateModelGenerator.registerParentedItemModel(ANIntegrationBlocks.AN_CHOPPING_BOARDS.get(name),
+                    Identifier.of(JamJelly.MOD_ID, "block/chopping_board_"+name));
+        }
+
+        for(String name : WF_WOOD_NAMES)
+        {
+            JsonHelper.createChoppingBoardBlockState(ModJsonTemplates.CHOPPING_BOARD_BS_TEMPLATE, name);
+            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_KNIFE_TEMPLATE, name, true);
+            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_TEMPLATE, name, false);
+            blockStateModelGenerator.registerParentedItemModel(WFIntegrationBlocks.WF_CHOPPING_BOARDS.get(name),
                     Identifier.of(JamJelly.MOD_ID, "block/chopping_board_"+name));
         }
         //Integration
@@ -202,12 +227,20 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.SWEETBERRY_JELLY, Models.GENERATED);
         itemModelGenerator.register(ModItems.MELON_JELLY, Models.GENERATED);
 
-        for(String name : JAM_NAMES)
+        for(String name : AN_JAM_NAMES)
         {
-            itemModelGenerator.register(IntegrationItems.JAM_BOTTLES.get(name), Models.GENERATED);
-            itemModelGenerator.register(IntegrationItems.JUICE_BOTTLES.get(name), Models.GENERATED);
-            itemModelGenerator.register(IntegrationItems.JELLY.get(name), Models.GENERATED);
-            itemModelGenerator.register(IntegrationItems.JAM_CHOPPED.get(name), Models.GENERATED);
+            itemModelGenerator.register(ANIntegrationItems.AN_JAM_BOTTLES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ANIntegrationItems.AN_JUICE_BOTTLES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ANIntegrationItems.AN_JELLY.get(name), Models.GENERATED);
+            itemModelGenerator.register(ANIntegrationItems.AN_JAM_CHOPPED.get(name), Models.GENERATED);
+        }
+
+        for(String name : WF_JAM_NAMES)
+        {
+            itemModelGenerator.register(WFIntegrationItems.WF_JAM_BOTTLES.get(name), Models.GENERATED);
+            itemModelGenerator.register(WFIntegrationItems.WF_JUICE_BOTTLES.get(name), Models.GENERATED);
+            itemModelGenerator.register(WFIntegrationItems.WF_JELLY.get(name), Models.GENERATED);
+            itemModelGenerator.register(WFIntegrationItems.WF_JAM_CHOPPED.get(name), Models.GENERATED);
         }
     }
 }

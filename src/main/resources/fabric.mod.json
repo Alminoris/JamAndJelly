@@ -8,7 +8,7 @@
 		"Almiris (Alminoris)"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://github.com/Alminoris/JamAndJelly",
 		"sources": "https://github.com/Alminoris/JamAndJelly"
 	},
 	"license": "CC0-1.0",
@@ -30,7 +30,7 @@
 		"jamandjelly.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.7",
+		"fabricloader": ">=0.16.10",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"

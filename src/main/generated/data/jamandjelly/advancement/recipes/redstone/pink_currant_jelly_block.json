@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pink_currant_jelly": {
+      "conditions": {
+        "items": [
+          {
+            "items": "jamandjelly:pink_currant_jelly"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jamandjelly:pink_currant_jelly_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pink_currant_jelly"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jamandjelly:pink_currant_jelly_block"
+    ]
+  }
+}

@@ -1,7 +1,8 @@
 package net.alminoris.jamandjelly.datagen;
 
 import net.alminoris.jamandjelly.block.ModBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -22,8 +23,10 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks.WOOD_NAMES;
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks.AN_WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks.WF_WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider
@@ -58,11 +61,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
         addDrop(ModBlocks.APPLE_JELLY_BLOCK);
         addDrop(ModBlocks.SWEETBERRY_JELLY_BLOCK);
         addDrop(ModBlocks.MELON_JELLY_BLOCK);
-        for(String name : JAM_NAMES)
-            addDrop(IntegrationBlocks.JAM_BLOCKS.get(name));
-
-        for(String name : JAM_NAMES)
-            addDrop(IntegrationBlocks.JELLY_BLOCKS.get(name));
+        for(String name : AN_JAM_NAMES)
+        {
+            addDrop(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name));
+            addDrop(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name));
+        }
+        for(String name : WF_JAM_NAMES)
+        {
+            addDrop(WFIntegrationBlocks.WF_JAM_BLOCKS.get(name));
+            addDrop(WFIntegrationBlocks.WF_JELLY_BLOCKS.get(name));
+        }
 
         for(String name: PLASTIC_BLOCK_NAMES)
         {
@@ -87,8 +95,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
         addDrop(ModBlocks.CHOPPING_BOARD_MANGROVE);
         addDrop(ModBlocks.CHOPPING_BOARD_CHERRY);
         addDrop(ModBlocks.CHOPPING_BOARD_BAMBOO);
-        for(String name : WOOD_NAMES)
-            addDrop(IntegrationBlocks.CHOPPING_BOARDS.get(name));
+        for(String name : AN_WOOD_NAMES)
+            addDrop(ANIntegrationBlocks.AN_CHOPPING_BOARDS.get(name));
+        for(String name : WF_WOOD_NAMES)
+            addDrop(WFIntegrationBlocks.WF_CHOPPING_BOARDS.get(name));
     }
 
     private LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops)

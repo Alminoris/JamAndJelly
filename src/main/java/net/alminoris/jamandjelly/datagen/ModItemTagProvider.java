@@ -1,19 +1,18 @@
 package net.alminoris.jamandjelly.datagen;
 
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
@@ -42,16 +41,28 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
                 .add(ModItems.SWEETBERRY_CHOPPED)
                 .add(ModItems.MELON_CHOPPED);
 
-        for(String name : JAM_NAMES)
+        for(String name : AN_JAM_NAMES)
         {
             getOrCreateTagBuilder(ModTags.Items.JAM_BOTTLES)
-                    .add(IntegrationItems.JAM_BOTTLES.get(name));
+                    .add(ANIntegrationItems.AN_JAM_BOTTLES.get(name));
 
             getOrCreateTagBuilder(ModTags.Items.JUICE_BOTTLES)
-                    .add(IntegrationItems.JUICE_BOTTLES.get(name));
+                    .add(ANIntegrationItems.AN_JUICE_BOTTLES.get(name));
 
             getOrCreateTagBuilder(ModTags.Items.JAM_INGREDIENTS)
-                    .add(IntegrationItems.JAM_CHOPPED.get(name));
+                    .add(ANIntegrationItems.AN_JAM_CHOPPED.get(name));
+        }
+
+        for(String name : WF_JAM_NAMES)
+        {
+            getOrCreateTagBuilder(ModTags.Items.JAM_BOTTLES)
+                    .add(WFIntegrationItems.WF_JAM_BOTTLES.get(name));
+
+            getOrCreateTagBuilder(ModTags.Items.JUICE_BOTTLES)
+                    .add(WFIntegrationItems.WF_JUICE_BOTTLES.get(name));
+
+            getOrCreateTagBuilder(ModTags.Items.JAM_INGREDIENTS)
+                    .add(WFIntegrationItems.WF_JAM_CHOPPED.get(name));
         }
     }
 }

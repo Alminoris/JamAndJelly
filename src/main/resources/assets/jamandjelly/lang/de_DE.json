@@ -228,5 +228,10 @@
   "item.jamandjelly.blueberry_chopped": "Gehackte Blaubeeren",
   "block.jamandjelly.blueberry_jelly_block": "Blaubeerengelee-Block",
   "block.jamandjelly.blueberry_jam_block": "Blaubeerenmarmelade-Block",
-  "block.jamandjelly.chopping_board_pine": "Küchenbrett aus Kiefernholz"
+  "block.jamandjelly.chopping_board_pine": "Küchenbrett aus Kiefernholz",
+  "block.jamandjelly.chopping_board_olive": "Olivenholz-Schneidebrett",
+  "block.jamandjelly.chopping_board_tamarisk": "Tamariskenholz-Schneidebrett",
+  "block.jamandjelly.chopping_board_fir": "Tannenholz-Schneidebrett",
+  "block.jamandjelly.chopping_board_cedar": "Zedernholz-Schneidebrett",
+  "block.jamandjelly.chopping_board_bauhinia": "Bauhinienholz-Schneidebrett"
 }

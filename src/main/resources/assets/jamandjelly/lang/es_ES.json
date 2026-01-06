@@ -228,5 +228,10 @@
   "item.jamandjelly.blueberry_chopped": "Arándanos azules picados",
   "block.jamandjelly.blueberry_jelly_block": "Bloque de gelatina de arándanos azules",
   "block.jamandjelly.blueberry_jam_block": "Bloque de mermelada de arándanos azules",
-  "block.jamandjelly.chopping_board_pine": "Tabla de cortar de pino"
+  "block.jamandjelly.chopping_board_pine": "Tabla de cortar de pino",
+  "block.jamandjelly.chopping_board_olive": "Tabla de cortar de olivo",
+  "block.jamandjelly.chopping_board_tamarisk": "Tabla de cortar de tamarisco",
+  "block.jamandjelly.chopping_board_fir": "Tabla de cortar de abeto",
+  "block.jamandjelly.chopping_board_cedar": "Tabla de cortar de cedro",
+  "block.jamandjelly.chopping_board_bauhinia": "Tabla de cortar de bauhinia"
 }

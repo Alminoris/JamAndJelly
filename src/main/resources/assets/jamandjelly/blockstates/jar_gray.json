@@ -1,0 +1,364 @@
+{
+   "variants": {
+     "open=true,variant=0,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_0"
+     },
+     "open=false,variant=1,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_1"
+     },
+     "open=false,variant=2,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_2"
+     },
+     "open=false,variant=3,inside=apple": {
+       "model": "jamandjelly:block/apple/jar_gray_3"
+     },
+     "open=true,variant=0,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_0"
+     },
+     "open=false,variant=1,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_1"
+     },
+     "open=false,variant=2,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_2"
+     },
+     "open=false,variant=3,inside=sweetberry": {
+       "model": "jamandjelly:block/sweetberry/jar_gray_3"
+     },
+     "open=true,variant=0,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_0"
+     },
+     "open=false,variant=1,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_1"
+     },
+     "open=false,variant=2,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_2"
+     },
+     "open=false,variant=3,inside=melon": {
+       "model": "jamandjelly:block/melon/jar_gray_3"
+     },
+     "open=true,variant=0,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_0"
+     },
+     "open=false,variant=1,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_1"
+     },
+     "open=false,variant=2,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_2"
+     },
+     "open=false,variant=3,inside=honey": {
+       "model": "jamandjelly:block/honey/jar_gray_3"
+     },
+     "open=true,variant=0,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_0"
+     },
+     "open=false,variant=1,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_1"
+     },
+     "open=false,variant=2,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_2"
+     },
+     "open=false,variant=3,inside=quince": {
+       "model": "jamandjelly:block/quince/jar_gray_3"
+     },
+     "open=true,variant=0,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_0"
+     },
+     "open=false,variant=1,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_1"
+     },
+     "open=false,variant=2,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_2"
+     },
+     "open=false,variant=3,inside=plum": {
+       "model": "jamandjelly:block/plum/jar_gray_3"
+     },
+     "open=true,variant=0,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_0"
+     },
+     "open=false,variant=1,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_1"
+     },
+     "open=false,variant=2,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_2"
+     },
+     "open=false,variant=3,inside=mango": {
+       "model": "jamandjelly:block/mango/jar_gray_3"
+     },
+     "open=true,variant=0,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_0"
+     },
+     "open=false,variant=1,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_1"
+     },
+     "open=false,variant=2,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_2"
+     },
+     "open=false,variant=3,inside=figs": {
+       "model": "jamandjelly:block/figs/jar_gray_3"
+     },
+     "open=true,variant=0,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_0"
+     },
+     "open=false,variant=1,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_1"
+     },
+     "open=false,variant=2,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_2"
+     },
+     "open=false,variant=3,inside=viburnum": {
+       "model": "jamandjelly:block/viburnum/jar_gray_3"
+     },
+     "open=true,variant=0,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_0"
+     },
+     "open=false,variant=1,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_1"
+     },
+     "open=false,variant=2,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_2"
+     },
+     "open=false,variant=3,inside=white_mulberry": {
+       "model": "jamandjelly:block/white_mulberry/jar_gray_3"
+     },
+     "open=true,variant=0,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_0"
+     },
+     "open=false,variant=1,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_1"
+     },
+     "open=false,variant=2,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_2"
+     },
+     "open=false,variant=3,inside=wild_cherry": {
+       "model": "jamandjelly:block/wild_cherry/jar_gray_3"
+     },
+     "open=true,variant=0,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_0"
+     },
+     "open=false,variant=1,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_1"
+     },
+     "open=false,variant=2,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_2"
+     },
+     "open=false,variant=3,inside=bilberry": {
+       "model": "jamandjelly:block/bilberry/jar_gray_3"
+     },
+     "open=true,variant=0,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_0"
+     },
+     "open=false,variant=1,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_1"
+     },
+     "open=false,variant=2,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_2"
+     },
+     "open=false,variant=3,inside=blackberry": {
+       "model": "jamandjelly:block/blackberry/jar_gray_3"
+     },
+     "open=true,variant=0,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_0"
+     },
+     "open=false,variant=1,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_1"
+     },
+     "open=false,variant=2,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_2"
+     },
+     "open=false,variant=3,inside=pink_currant": {
+       "model": "jamandjelly:block/pink_currant/jar_gray_3"
+     },
+     "open=true,variant=0,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_0_open"
+     },
+     "open=true,variant=1,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_1_open"
+     },
+     "open=true,variant=2,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_2_open"
+     },
+     "open=true,variant=3,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_3_open"
+     },
+     "open=false,variant=0,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_0"
+     },
+     "open=false,variant=1,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_1"
+     },
+     "open=false,variant=2,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_2"
+     },
+     "open=false,variant=3,inside=blueberry": {
+       "model": "jamandjelly:block/blueberry/jar_gray_3"
+     }
+   }
+ }

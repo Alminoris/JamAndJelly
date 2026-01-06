@@ -1,7 +1,8 @@
 package net.alminoris.jamandjelly.block.entity;
 
 import net.alminoris.jamandjelly.block.custom.JammingPotBlock;
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.network.BlockPosPayload;
 import net.alminoris.jamandjelly.screen.JammingPotScreenHandler;
@@ -30,7 +31,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 
 public class JammingPotBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPosPayload>, ImplementedInventory
 {
@@ -268,9 +270,21 @@ public class JammingPotBlockEntity extends BlockEntity implements ExtendedScreen
             {
                 if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                 {
-                    for (String name : JAM_NAMES)
+                    for (String name : AN_JAM_NAMES)
                     {
-                        if (result.getItem() == IntegrationItems.JAM_BOTTLES.get(name) || result.getItem() == IntegrationItems.JELLY.get(name))
+                        if (result.getItem() == ANIntegrationItems.AN_JAM_BOTTLES.get(name) || result.getItem() == ANIntegrationItems.AN_JELLY.get(name))
+                        {
+                            newInside = JammingPotBlock.Inside.fromString(name);
+                            break;
+                        }
+                    }
+                }
+
+                if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                {
+                    for (String name : WF_JAM_NAMES)
+                    {
+                        if (result.getItem() == WFIntegrationItems.WF_JAM_BOTTLES.get(name) || result.getItem() == WFIntegrationItems.WF_JELLY.get(name))
                         {
                             newInside = JammingPotBlock.Inside.fromString(name);
                             break;

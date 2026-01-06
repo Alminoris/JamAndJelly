@@ -3,8 +3,7 @@ package net.alminoris.jamandjelly;
 import net.alminoris.jamandjelly.block.ModBlocks;
 import net.alminoris.jamandjelly.block.entity.ModBlockEntities;
 import net.alminoris.jamandjelly.block.entity.renderer.ChoppingBoardBlockEntityRenderer;
-import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks;
 import net.alminoris.jamandjelly.screen.ChoppingBoardScreen;
 import net.alminoris.jamandjelly.screen.JammingPotScreen;
 import net.alminoris.jamandjelly.screen.ModScreenHandlers;
@@ -15,7 +14,7 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
 
 public class JamJellyClient implements ClientModInitializer
 {
@@ -49,11 +48,11 @@ public class JamJellyClient implements ClientModInitializer
 
         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
         {
-            for(String name : JAM_NAMES)
-                BlockRenderLayerMap.INSTANCE.putBlock(IntegrationBlocks.JAM_BLOCKS.get(name), RenderLayer.getTranslucent());
+            for(String name : AN_JAM_NAMES)
+                BlockRenderLayerMap.INSTANCE.putBlock(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name), RenderLayer.getTranslucent());
 
-            for(String name : JAM_NAMES)
-                BlockRenderLayerMap.INSTANCE.putBlock(IntegrationBlocks.JELLY_BLOCKS.get(name), RenderLayer.getTranslucent());
+            for(String name : AN_JAM_NAMES)
+                BlockRenderLayerMap.INSTANCE.putBlock(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name), RenderLayer.getTranslucent());
         }
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAMMING_POT, RenderLayer.getTranslucent());

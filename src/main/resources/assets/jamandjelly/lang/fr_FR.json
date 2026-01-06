@@ -228,5 +228,10 @@
   "item.jamandjelly.blueberry_chopped": "Bleuets hachés",
   "block.jamandjelly.blueberry_jelly_block": "Bloc de gelée de bleuet",
   "block.jamandjelly.blueberry_jam_block": "Bloc de confiture de bleuet",
-  "block.jamandjelly.chopping_board_pine": "Planche à découper en pin"
+  "block.jamandjelly.chopping_board_pine": "Planche à découper en pin",
+  "block.jamandjelly.chopping_board_olive": "Planche à découper en bois d'olivier",
+  "block.jamandjelly.chopping_board_tamarisk": "Planche à découper en bois de tamaris",
+  "block.jamandjelly.chopping_board_fir": "Planche à découper en bois de sapin",
+  "block.jamandjelly.chopping_board_cedar": "Planche à découper en bois de cèdre",
+  "block.jamandjelly.chopping_board_bauhinia": "Planche à découper en bois de bauhinia"
 }

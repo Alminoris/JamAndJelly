@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plum_jelly": {
+      "conditions": {
+        "items": [
+          {
+            "items": "jamandjelly:plum_jelly"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jamandjelly:plum_jelly_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plum_jelly"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jamandjelly:plum_jelly_block"
+    ]
+  }
+}

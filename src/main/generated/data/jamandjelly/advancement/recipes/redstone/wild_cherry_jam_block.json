@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jamandjelly:wild_cherry_jam_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wild_cherry_jam_bottle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "jamandjelly:wild_cherry_jam_bottle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wild_cherry_jam_bottle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jamandjelly:wild_cherry_jam_block"
+    ]
+  }
+}

@@ -2,8 +2,10 @@ package net.alminoris.jamandjelly.datagen;
 
 import com.google.common.collect.ImmutableList;
 import net.alminoris.jamandjelly.block.ModBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -21,7 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
 
 public class ModRecipeProvider extends FabricRecipeProvider
@@ -132,33 +135,64 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .criterion(hasItem(ModItems.MELON_JELLY), conditionsFromItem(ModItems.MELON_JELLY))
                 .offerTo(recipeExporter);
 
-        for(String name : JAM_NAMES)
+        for(String name : AN_JAM_NAMES)
         {
-            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, IntegrationBlocks.JAM_BLOCKS.get(name), 1)
+            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ANIntegrationBlocks.AN_JAM_BLOCKS.get(name), 1)
                     .pattern("##")
                     .pattern("##")
-                    .input('#', IntegrationItems.JAM_BOTTLES.get(name))
-                    .criterion(hasItem(IntegrationItems.JAM_BOTTLES.get(name)), conditionsFromItem(IntegrationItems.JAM_BOTTLES.get(name)))
+                    .input('#', ANIntegrationItems.AN_JAM_BOTTLES.get(name))
+                    .criterion(hasItem(ANIntegrationItems.AN_JAM_BOTTLES.get(name)), conditionsFromItem(ANIntegrationItems.AN_JAM_BOTTLES.get(name)))
                     .offerTo(recipeExporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, IntegrationItems.JAM_BOTTLES.get(name), 4)
-                    .input(IntegrationBlocks.JAM_BLOCKS.get(name))
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ANIntegrationItems.AN_JAM_BOTTLES.get(name), 4)
+                    .input(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name))
                     .input(Items.GLASS_BOTTLE, 4)
-                    .criterion(hasItem(IntegrationBlocks.JAM_BLOCKS.get(name)), conditionsFromItem(IntegrationBlocks.JAM_BLOCKS.get(name)))
+                    .criterion(hasItem(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name)), conditionsFromItem(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name)))
                     .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
                     .offerTo(recipeExporter);
 
-            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, IntegrationBlocks.JELLY_BLOCKS.get(name), 1)
+            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name), 1)
                     .pattern("##")
                     .pattern("##")
-                    .input('#', IntegrationItems.JELLY.get(name))
-                    .criterion(hasItem(IntegrationItems.JELLY.get(name)), conditionsFromItem(IntegrationItems.JELLY.get(name)))
+                    .input('#', ANIntegrationItems.AN_JELLY.get(name))
+                    .criterion(hasItem(ANIntegrationItems.AN_JELLY.get(name)), conditionsFromItem(ANIntegrationItems.AN_JELLY.get(name)))
                     .offerTo(recipeExporter);
 
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, IntegrationItems.JELLY.get(name), 4)
-                    .input(IntegrationBlocks.JELLY_BLOCKS.get(name))
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ANIntegrationItems.AN_JELLY.get(name), 4)
+                    .input(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name))
                     .input(Items.BOWL, 4)
-                    .criterion(hasItem(IntegrationBlocks.JELLY_BLOCKS.get(name)), conditionsFromItem(IntegrationBlocks.JELLY_BLOCKS.get(name)))
+                    .criterion(hasItem(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name)), conditionsFromItem(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name)))
+                    .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                    .offerTo(recipeExporter);
+        }
+
+        for(String name : WF_JAM_NAMES)
+        {
+            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, WFIntegrationBlocks.WF_JAM_BLOCKS.get(name), 1)
+                    .pattern("##")
+                    .pattern("##")
+                    .input('#', ANIntegrationItems.AN_JAM_BOTTLES.get(name))
+                    .criterion(hasItem(ANIntegrationItems.AN_JAM_BOTTLES.get(name)), conditionsFromItem(WFIntegrationItems.WF_JAM_BOTTLES.get(name)))
+                    .offerTo(recipeExporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, WFIntegrationItems.WF_JAM_BOTTLES.get(name), 4)
+                    .input(WFIntegrationBlocks.WF_JAM_BLOCKS.get(name))
+                    .input(Items.GLASS_BOTTLE, 4)
+                    .criterion(hasItem(WFIntegrationBlocks.WF_JAM_BLOCKS.get(name)), conditionsFromItem(WFIntegrationBlocks.WF_JAM_BLOCKS.get(name)))
+                    .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
+                    .offerTo(recipeExporter);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, WFIntegrationBlocks.WF_JELLY_BLOCKS.get(name), 1)
+                    .pattern("##")
+                    .pattern("##")
+                    .input('#', WFIntegrationItems.WF_JELLY.get(name))
+                    .criterion(hasItem(WFIntegrationItems.WF_JELLY.get(name)), conditionsFromItem(WFIntegrationItems.WF_JELLY.get(name)))
+                    .offerTo(recipeExporter);
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, WFIntegrationItems.WF_JELLY.get(name), 4)
+                    .input(WFIntegrationBlocks.WF_JELLY_BLOCKS.get(name))
+                    .input(Items.BOWL, 4)
+                    .criterion(hasItem(WFIntegrationBlocks.WF_JELLY_BLOCKS.get(name)), conditionsFromItem(WFIntegrationBlocks.WF_JELLY_BLOCKS.get(name)))
                     .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
                     .offerTo(recipeExporter);
         }

@@ -1,0 +1,59 @@
+package net.alminoris.jamandjelly.integration.wildfields.block;
+
+import net.alminoris.jamandjelly.JamJelly;
+import net.alminoris.jamandjelly.block.custom.ChoppingBoardBlock;
+import net.alminoris.jamandjelly.block.custom.JamBlock;
+import net.alminoris.jamandjelly.block.custom.JellyBlock;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
+
+public class WFIntegrationBlocks
+{
+    public static final String[] WF_WOOD_NAMES = { "olive", "tamarisk" };
+    public static final Dictionary<String, Block> WF_CHOPPING_BOARDS = new Hashtable<>();
+
+    public static final Dictionary<String, Block> WF_JAM_BLOCKS = new Hashtable<>();
+    public static final Dictionary<String, Block> WF_JELLY_BLOCKS = new Hashtable<>();
+
+    static
+    {
+        for(String name : WF_WOOD_NAMES)
+        {
+            WF_CHOPPING_BOARDS.put(name, registerBlock("chopping_board_"+name, new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque())));
+        }
+
+        for(String name : WF_JAM_NAMES)
+        {
+            WF_JAM_BLOCKS.put(name, registerBlock(name+"_jam_block", new JamBlock()));
+            WF_JELLY_BLOCKS.put(name, registerBlock(name+"_jelly_block", new JellyBlock(AbstractBlock.Settings.copy(Blocks.SLIME_BLOCK))));
+        }
+    }
+
+    private static Block registerBlock(String name, Block block)
+    {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(JamJelly.MOD_ID, name), block);
+    }
+
+    private static void registerBlockItem(String name, Block block)
+    {
+        Registry.register(Registries.ITEM, Identifier.of(JamJelly.MOD_ID, name),
+                new BlockItem(block, new Item.Settings()));
+    }
+
+    public static void registerBlocks()
+    {
+        JamJelly.LOGGER.info("Wild Fields is present");
+    }
+}

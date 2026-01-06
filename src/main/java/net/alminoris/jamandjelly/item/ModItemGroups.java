@@ -2,8 +2,10 @@ package net.alminoris.jamandjelly.item;
 
 import net.alminoris.jamandjelly.JamJelly;
 import net.alminoris.jamandjelly.block.ModBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks;
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
@@ -14,8 +16,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.block.IntegrationBlocks.WOOD_NAMES;
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks.AN_WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks.WF_WOOD_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
 
 public class ModItemGroups
@@ -40,8 +44,13 @@ public class ModItemGroups
                         entries.add(ModBlocks.CHOPPING_BOARD_BAMBOO);
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : WOOD_NAMES)
-                                entries.add(IntegrationBlocks.CHOPPING_BOARDS.get(name));
+                            for(String name : AN_WOOD_NAMES)
+                                entries.add(ANIntegrationBlocks.AN_CHOPPING_BOARDS.get(name));
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : WF_WOOD_NAMES)
+                                entries.add(WFIntegrationBlocks.WF_CHOPPING_BOARDS.get(name));
                         }
                         entries.add(ModItems.LADLE);
                         entries.add(ModItems.KITCHEN_KNIFE);
@@ -50,48 +59,78 @@ public class ModItemGroups
                         entries.add(ModItems.MELON_JAM_BOTTLE);
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : JAM_NAMES)
-                                entries.add(IntegrationItems.JAM_BOTTLES.get(name));
+                            for(String name : AN_JAM_NAMES)
+                                entries.add(ANIntegrationItems.AN_JAM_BOTTLES.get(name));
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : WF_JAM_NAMES)
+                                entries.add(WFIntegrationItems.WF_JAM_BOTTLES.get(name));
                         }
                         entries.add(ModItems.GLASS_APPLE_JUICE_BOTTLE);
                         entries.add(ModItems.GLASS_SWEETBERRY_JUICE_BOTTLE);
                         entries.add(ModItems.GLASS_MELON_JUICE_BOTTLE);
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : JAM_NAMES)
-                                entries.add(IntegrationItems.JUICE_BOTTLES.get(name));
+                            for(String name : AN_JAM_NAMES)
+                                entries.add(ANIntegrationItems.AN_JUICE_BOTTLES.get(name));
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : WF_JAM_NAMES)
+                                entries.add(WFIntegrationItems.WF_JUICE_BOTTLES.get(name));
                         }
                         entries.add(ModItems.APPLE_JELLY);
                         entries.add(ModItems.SWEETBERRY_JELLY);
                         entries.add(ModItems.MELON_JELLY);
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : JAM_NAMES)
-                                entries.add(IntegrationItems.JELLY.get(name));
+                            for(String name : AN_JAM_NAMES)
+                                entries.add(ANIntegrationItems.AN_JELLY.get(name));
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : WF_JAM_NAMES)
+                                entries.add(WFIntegrationItems.WF_JELLY.get(name));
                         }
                         entries.add(ModBlocks.APPLE_JAM_BLOCK);
                         entries.add(ModBlocks.SWEETBERRY_JAM_BLOCK);
                         entries.add(ModBlocks.MELON_JAM_BLOCK);
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : JAM_NAMES)
-                                entries.add(IntegrationBlocks.JAM_BLOCKS.get(name));
+                            for(String name : AN_JAM_NAMES)
+                                entries.add(ANIntegrationBlocks.AN_JAM_BLOCKS.get(name));
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : WF_JAM_NAMES)
+                                entries.add(WFIntegrationBlocks.WF_JAM_BLOCKS.get(name));
                         }
                         entries.add(ModBlocks.APPLE_JELLY_BLOCK);
                         entries.add(ModBlocks.SWEETBERRY_JELLY_BLOCK);
                         entries.add(ModBlocks.MELON_JELLY_BLOCK);
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : JAM_NAMES)
-                                entries.add(IntegrationBlocks.JELLY_BLOCKS.get(name));
+                            for(String name : AN_JAM_NAMES)
+                                entries.add(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name));
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : WF_JAM_NAMES)
+                                entries.add(WFIntegrationBlocks.WF_JELLY_BLOCKS.get(name));
                         }
                         entries.add(ModItems.APPLE_CHOPPED);
                         entries.add(ModItems.SWEETBERRY_CHOPPED);
                         entries.add(ModItems.MELON_CHOPPED);
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : JAM_NAMES)
-                                entries.add(IntegrationItems.JAM_CHOPPED.get(name));
+                            for(String name : AN_JAM_NAMES)
+                                entries.add(ANIntegrationItems.AN_JAM_CHOPPED.get(name));
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : WF_JAM_NAMES)
+                                entries.add(WFIntegrationItems.WF_JAM_CHOPPED.get(name));
                         }
                         entries.add(ModItems.GELATIN);
                         entries.add(ModBlocks.KELP_BLOCK);

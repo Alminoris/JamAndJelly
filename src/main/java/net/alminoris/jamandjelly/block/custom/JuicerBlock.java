@@ -1,6 +1,7 @@
 package net.alminoris.jamandjelly.block.custom;
 
-import net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems;
+import net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems;
+import net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems;
 import net.alminoris.jamandjelly.item.ModItems;
 import net.alminoris.jamandjelly.sound.ModSounds;
 import net.alminoris.jamandjelly.util.ModTags;
@@ -10,13 +11,11 @@ import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
@@ -28,7 +27,8 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.item.IntegrationItems.JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
+import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 
 public class JuicerBlock extends Block
 {
@@ -46,7 +46,8 @@ public class JuicerBlock extends Block
         WILD_CHERRY("wild_cherry"),
         BILBERRY("bilberry"),
         BLACKBERRY("blackberry"),
-        PINK_CURRANT("pink_currant");
+        PINK_CURRANT("pink_currant"),
+        BLUEBERRY("blueberry");
 
         private final String name;
 
@@ -123,7 +124,16 @@ public class JuicerBlock extends Block
 
                     if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                     {
-                        for (String name : JAM_NAMES)
+                        for (String name : AN_JAM_NAMES)
+                        {
+                            if (itemName.equals(name))
+                                nextInside = Inside.fromString(name);
+                        }
+                    }
+
+                    if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                    {
+                        for (String name : WF_JAM_NAMES)
                         {
                             if (itemName.equals(name))
                                 nextInside = Inside.fromString(name);
@@ -152,10 +162,19 @@ public class JuicerBlock extends Block
 
                 if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                 {
-                    for (String name : JAM_NAMES)
+                    for (String name : AN_JAM_NAMES)
                     {
                         if (currentInside.asString().equals(name))
-                            newItem = IntegrationItems.JUICE_BOTTLES.get(name);
+                            newItem = ANIntegrationItems.AN_JUICE_BOTTLES.get(name);
+                    }
+                }
+
+                if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                {
+                    for (String name : WF_JAM_NAMES)
+                    {
+                        if (currentInside.asString().equals(name))
+                            newItem = WFIntegrationItems.WF_JUICE_BOTTLES.get(name);
                     }
                 }
 

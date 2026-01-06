@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "jamandjelly:item/glass_blackberry_juice_bottle"
+  }
+}

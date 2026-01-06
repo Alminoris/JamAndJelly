@@ -228,5 +228,10 @@
   "item.jamandjelly.blueberry_chopped": "Нарезанная голубика",
   "block.jamandjelly.blueberry_jelly_block": "Блок желе из голубики",
   "block.jamandjelly.blueberry_jam_block": "Блок джема из голубики",
-  "block.jamandjelly.chopping_board_pine": "Сосновая разделочная доска"
+  "block.jamandjelly.chopping_board_pine": "Сосновая разделочная доска",
+  "block.jamandjelly.chopping_board_olive": "Оливковая разделочная доска",
+  "block.jamandjelly.chopping_board_tamarisk": "Тамарискская разделочная доска",
+  "block.jamandjelly.chopping_board_fir": "Пихтовая разделочная доска",
+  "block.jamandjelly.chopping_board_cedar": "Кедровая разделочная доска",
+  "block.jamandjelly.chopping_board_bauhinia": "Баухиниевская разделочная доска"
 }

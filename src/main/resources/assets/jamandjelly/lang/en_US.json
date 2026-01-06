@@ -228,5 +228,10 @@
   "item.jamandjelly.blueberry_chopped": "Chopped Blueberry",
   "block.jamandjelly.blueberry_jelly_block": "Blueberry Jelly Block",
   "block.jamandjelly.blueberry_jam_block": "Blueberry Jam Block",
-  "block.jamandjelly.chopping_board_pine": "Pine Chopping Board"
+  "block.jamandjelly.chopping_board_bauhinia": "Bauhinia Chopping Board",
+  "block.jamandjelly.chopping_board_pine": "Pine Chopping Board",
+  "block.jamandjelly.chopping_board_olive": "Olive Chopping Board",
+  "block.jamandjelly.chopping_board_tamarisk": "Tamarisk Chopping Board",
+  "block.jamandjelly.chopping_board_fir": "Fir Chopping Board",
+  "block.jamandjelly.chopping_board_cedar": "Cedar Chopping Board"
 }
