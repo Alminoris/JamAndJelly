@@ -50,17 +50,11 @@ public class ModBlocks
 
     public static final Block JUICER = registerBlock("juicer", new JuicerBlock());
 
-    public static final Block CHOPPING_BOARD_OAK = registerBlock("chopping_board_oak", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_BIRCH = registerBlock("chopping_board_birch", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_SPRUCE = registerBlock("chopping_board_spruce", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_JUNGLE = registerBlock("chopping_board_jungle", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_ACACIA = registerBlock("chopping_board_acacia", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_DARK_OAK = registerBlock("chopping_board_dark_oak", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_CRIMSON = registerBlock("chopping_board_crimson", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_WARPED = registerBlock("chopping_board_warped", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_MANGROVE = registerBlock("chopping_board_mangrove", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_CHERRY = registerBlock("chopping_board_cherry", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
-    public static final Block CHOPPING_BOARD_BAMBOO = registerBlock("chopping_board_bamboo", new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque()));
+    public static final Dictionary<String, Block> CHOPPING_BOARDS = new Hashtable<>()
+    {{
+        for(String name : getWoods())
+            put(name, registerBlock("chopping_board_"+name, new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque())));
+    }};
 
     public static final Dictionary<String, Block> PLASTIC_BLOCKS = new Hashtable<>()
     {{

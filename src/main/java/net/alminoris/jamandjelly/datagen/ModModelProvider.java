@@ -18,11 +18,10 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 
 import static net.alminoris.jamandjelly.block.ModBlocks.*;
-import static net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks.AN_WOOD_NAMES;
 import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
-import static net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks.WF_WOOD_NAMES;
 import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
+import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.getWoods;
 
 public class ModModelProvider extends FabricModelProvider
 {
@@ -115,7 +114,6 @@ public class ModModelProvider extends FabricModelProvider
             JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_TEMPLATE, wood, false);
         }
 
-        //Integration
         for(String name : AN_JAM_NAMES)
         {
             blockStateModelGenerator.registerSimpleCubeAll(ANIntegrationBlocks.AN_JELLY_BLOCKS.get(name));
@@ -140,36 +138,15 @@ public class ModModelProvider extends FabricModelProvider
                 registerJar(color, name);
         }
 
-        for(String name : AN_WOOD_NAMES)
+        for(String name : getWoods())
         {
             JsonHelper.createChoppingBoardBlockState(ModJsonTemplates.CHOPPING_BOARD_BS_TEMPLATE, name);
             JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_KNIFE_TEMPLATE, name, true);
             JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_TEMPLATE, name, false);
-            blockStateModelGenerator.registerParentedItemModel(ANIntegrationBlocks.AN_CHOPPING_BOARDS.get(name),
+            blockStateModelGenerator.registerParentedItemModel(CHOPPING_BOARDS.get(name),
                     Identifier.of(JamJelly.MOD_ID, "block/chopping_board_"+name));
         }
 
-        for(String name : WF_WOOD_NAMES)
-        {
-            JsonHelper.createChoppingBoardBlockState(ModJsonTemplates.CHOPPING_BOARD_BS_TEMPLATE, name);
-            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_KNIFE_TEMPLATE, name, true);
-            JsonHelper.createChoppingBoardModel(ModJsonTemplates.CHOPPING_BOARD_TEMPLATE, name, false);
-            blockStateModelGenerator.registerParentedItemModel(WFIntegrationBlocks.WF_CHOPPING_BOARDS.get(name),
-                    Identifier.of(JamJelly.MOD_ID, "block/chopping_board_"+name));
-        }
-        //Integration
-
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_OAK, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_oak"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_BIRCH, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_birch"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_SPRUCE, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_spruce"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_JUNGLE, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_jungle"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_ACACIA, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_acacia"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_DARK_OAK, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_dark_oak"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_CRIMSON, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_crimson"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_WARPED, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_warped"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_MANGROVE, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_mangrove"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_CHERRY, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_cherry"));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.CHOPPING_BOARD_BAMBOO, Identifier.of(JamJelly.MOD_ID, "block/chopping_board_bamboo"));
 
         blockStateModelGenerator.registerParentedItemModel(ModBlocks.JAMMING_POT, Identifier.of(JamJelly.MOD_ID, "block/apple/jamming_pot_closed"));
     }

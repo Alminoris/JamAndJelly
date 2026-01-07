@@ -23,11 +23,10 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-import static net.alminoris.jamandjelly.integration.arborealnature.block.ANIntegrationBlocks.AN_WOOD_NAMES;
 import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegrationItems.AN_JAM_NAMES;
-import static net.alminoris.jamandjelly.integration.wildfields.block.WFIntegrationBlocks.WF_WOOD_NAMES;
 import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegrationItems.WF_JAM_NAMES;
 import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.PLASTIC_BLOCK_NAMES;
+import static net.alminoris.jamandjelly.util.helper.BlockSetsHelper.getWoods;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider
 {
@@ -84,21 +83,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
         addDrop(ModBlocks.KELP_BLOCK);
         addDrop(ModBlocks.JAMMING_POT);
         addDrop(ModBlocks.JUICER);
-        addDrop(ModBlocks.CHOPPING_BOARD_OAK);
-        addDrop(ModBlocks.CHOPPING_BOARD_BIRCH);
-        addDrop(ModBlocks.CHOPPING_BOARD_SPRUCE);
-        addDrop(ModBlocks.CHOPPING_BOARD_JUNGLE);
-        addDrop(ModBlocks.CHOPPING_BOARD_ACACIA);
-        addDrop(ModBlocks.CHOPPING_BOARD_DARK_OAK);
-        addDrop(ModBlocks.CHOPPING_BOARD_CRIMSON);
-        addDrop(ModBlocks.CHOPPING_BOARD_WARPED);
-        addDrop(ModBlocks.CHOPPING_BOARD_MANGROVE);
-        addDrop(ModBlocks.CHOPPING_BOARD_CHERRY);
-        addDrop(ModBlocks.CHOPPING_BOARD_BAMBOO);
-        for(String name : AN_WOOD_NAMES)
-            addDrop(ANIntegrationBlocks.AN_CHOPPING_BOARDS.get(name));
-        for(String name : WF_WOOD_NAMES)
-            addDrop(WFIntegrationBlocks.WF_CHOPPING_BOARDS.get(name));
+
+        for(String name : getWoods())
+            addDrop(ModBlocks.CHOPPING_BOARDS.get(name));
     }
 
     private LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops)

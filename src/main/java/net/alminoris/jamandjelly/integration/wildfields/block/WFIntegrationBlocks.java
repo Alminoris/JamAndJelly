@@ -20,19 +20,11 @@ import static net.alminoris.jamandjelly.integration.wildfields.item.WFIntegratio
 
 public class WFIntegrationBlocks
 {
-    public static final String[] WF_WOOD_NAMES = { "olive", "tamarisk" };
-    public static final Dictionary<String, Block> WF_CHOPPING_BOARDS = new Hashtable<>();
-
     public static final Dictionary<String, Block> WF_JAM_BLOCKS = new Hashtable<>();
     public static final Dictionary<String, Block> WF_JELLY_BLOCKS = new Hashtable<>();
 
     static
     {
-        for(String name : WF_WOOD_NAMES)
-        {
-            WF_CHOPPING_BOARDS.put(name, registerBlock("chopping_board_"+name, new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque())));
-        }
-
         for(String name : WF_JAM_NAMES)
         {
             WF_JAM_BLOCKS.put(name, registerBlock(name+"_jam_block", new JamBlock()));

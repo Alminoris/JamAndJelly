@@ -64,17 +64,17 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(recipeExporter);
 
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_OAK, Blocks.OAK_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_BIRCH, Blocks.BIRCH_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_SPRUCE, Blocks.SPRUCE_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_JUNGLE, Blocks.JUNGLE_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_ACACIA, Blocks.ACACIA_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_DARK_OAK, Blocks.DARK_OAK_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_CRIMSON, Blocks.CRIMSON_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_WARPED, Blocks.WARPED_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_MANGROVE, Blocks.MANGROVE_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_CHERRY, Blocks.CHERRY_SLAB);
-        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_BAMBOO, Blocks.BAMBOO_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_OAK, Blocks.OAK_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_BIRCH, Blocks.BIRCH_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_SPRUCE, Blocks.SPRUCE_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_JUNGLE, Blocks.JUNGLE_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_ACACIA, Blocks.ACACIA_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_DARK_OAK, Blocks.DARK_OAK_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_CRIMSON, Blocks.CRIMSON_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_WARPED, Blocks.WARPED_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_MANGROVE, Blocks.MANGROVE_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_CHERRY, Blocks.CHERRY_SLAB);
+//        registerChoppingBoardRecipe(recipeExporter, ModBlocks.CHOPPING_BOARD_BAMBOO, Blocks.BAMBOO_SLAB);
 
         registerJarBlockRecipe(recipeExporter, "plastic_black", ModBlocks.JAR_BLACK);
         registerJarBlockRecipe(recipeExporter, "plastic_brown", ModBlocks.JAR_BROWN);

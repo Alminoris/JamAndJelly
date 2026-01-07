@@ -20,20 +20,11 @@ import static net.alminoris.jamandjelly.integration.arborealnature.item.ANIntegr
 
 public class ANIntegrationBlocks
 {
-    public static final String[] AN_WOOD_NAMES = { "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry",
-            "bauhinia", "pine", "fir", "cedar" };
-    public static final Dictionary<String, Block> AN_CHOPPING_BOARDS = new Hashtable<>();
-
     public static final Dictionary<String, Block> AN_JAM_BLOCKS = new Hashtable<>();
     public static final Dictionary<String, Block> AN_JELLY_BLOCKS = new Hashtable<>();
 
     static
     {
-        for(String name : AN_WOOD_NAMES)
-        {
-            AN_CHOPPING_BOARDS.put(name, registerBlock("chopping_board_"+name, new ChoppingBoardBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).nonOpaque())));
-        }
-
         for(String name : AN_JAM_NAMES)
         {
             AN_JAM_BLOCKS.put(name, registerBlock(name+"_jam_block", new JamBlock()));
